@@ -1,0 +1,151 @@
+2025-06-28 16:19:52 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Starting LdaptoolApplication using Java 21.0.7 with PID 53433 (/home/jheer/Documents/git/ldaptool/target/classes started by jheer in /home/jheer/Documents/git/ldaptool)
+2025-06-28 16:19:52 [main] INFO  c.heer.ldaptool.LdaptoolApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-28 16:19:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data LDAP repositories in DEFAULT mode.
+2025-06-28 16:19:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 LDAP repository interfaces.
+2025-06-28 16:19:53 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-28 16:19:53 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-28 16:19:53 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-06-28 16:19:53 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-28 16:19:53 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1035 ms
+2025-06-28 16:19:53 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-28 16:19:53 [main] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-06-28 16:19:53 [main] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-06-28 16:19:53 [main] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-06-28 16:19:53 [main] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:389
+2025-06-28 16:19:53 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-28 16:19:53 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Started LdaptoolApplication in 1.993 seconds (process running for 2.223)
+2025-06-28 16:20:27 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-28 16:20:27 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-28 16:20:27 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-28 16:20:27 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: uid=user.99,ou=People,dc=example,dc=com
+2025-06-28 16:20:27 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - No authentication header provided, proceeding with anonymous bind
+2025-06-28 16:20:27 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: anonymous
+2025-06-28 16:20:27 [http-nio-8080-exec-1] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-06-28 16:20:27 [http-nio-8080-exec-1] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-06-28 16:20:27 [http-nio-8080-exec-1] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-06-28 16:20:27 [http-nio-8080-exec-1] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389/uid=user.99,ou=People,dc=example,dc=com
+2025-06-28 16:20:27 [http-nio-8080-exec-1] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389/uid=user.99,ou=People,dc=example,dc=com'
+2025-06-28 16:20:27 [http-nio-8080-exec-1] DEBUG o.s.ldap.core.LdapTemplate - Executing search with base [] and filter [(objectClass=person)]
+2025-06-28 16:20:27 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 1 entries
+2025-06-28 16:21:51 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: uid=user.99,ou=People,dc=example,dc=com
+2025-06-28 16:21:51 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - No authentication header provided, proceeding with anonymous bind
+2025-06-28 16:21:51 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: anonymous
+2025-06-28 16:21:51 [http-nio-8080-exec-3] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-06-28 16:21:51 [http-nio-8080-exec-3] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-06-28 16:21:51 [http-nio-8080-exec-3] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-06-28 16:21:51 [http-nio-8080-exec-3] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389/uid=user.99,ou=People,dc=example,dc=com
+2025-06-28 16:21:51 [http-nio-8080-exec-3] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389/uid=user.99,ou=People,dc=example,dc=com'
+2025-06-28 16:21:51 [http-nio-8080-exec-3] DEBUG o.s.ldap.core.LdapTemplate - Executing search with base [] and filter [(objectClass=person)]
+2025-06-28 16:21:51 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 1 entries
+2025-06-28 16:22:00 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: uid=user.99,ou=People,dc=example,dc=com
+2025-06-28 16:22:00 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - No authentication header provided, proceeding with anonymous bind
+2025-06-28 16:22:00 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: anonymous
+2025-06-28 16:22:00 [http-nio-8080-exec-4] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-06-28 16:22:00 [http-nio-8080-exec-4] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-06-28 16:22:00 [http-nio-8080-exec-4] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-06-28 16:22:00 [http-nio-8080-exec-4] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389/uid=user.99,ou=People,dc=example,dc=com
+2025-06-28 16:22:00 [http-nio-8080-exec-4] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389/uid=user.99,ou=People,dc=example,dc=com'
+2025-06-28 16:22:00 [http-nio-8080-exec-4] DEBUG o.s.ldap.core.LdapTemplate - Executing search with base [] and filter [(objectClass=person)]
+2025-06-28 16:22:00 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 1 entries
+2025-06-28 16:22:15 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: dc=example,dc=com
+2025-06-28 16:22:15 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - No authentication header provided, proceeding with anonymous bind
+2025-06-28 16:22:15 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: anonymous
+2025-06-28 16:22:15 [http-nio-8080-exec-5] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-06-28 16:22:15 [http-nio-8080-exec-5] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-06-28 16:22:15 [http-nio-8080-exec-5] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-06-28 16:22:15 [http-nio-8080-exec-5] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389/dc=example,dc=com
+2025-06-28 16:22:15 [http-nio-8080-exec-5] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389/dc=example,dc=com'
+2025-06-28 16:22:15 [http-nio-8080-exec-5] DEBUG o.s.ldap.core.LdapTemplate - Executing search with base [] and filter [(objectClass=person)]
+2025-06-28 16:22:15 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 102 entries
+2025-06-28 16:23:52 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: dc=example,dc=com
+2025-06-28 16:23:52 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - No authentication header provided, proceeding with anonymous bind
+2025-06-28 16:23:52 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: anonymous
+2025-06-28 16:23:52 [http-nio-8080-exec-7] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-06-28 16:23:52 [http-nio-8080-exec-7] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-06-28 16:23:52 [http-nio-8080-exec-7] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-06-28 16:23:52 [http-nio-8080-exec-7] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389/dc=example,dc=com
+2025-06-28 16:23:52 [http-nio-8080-exec-7] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389/dc=example,dc=com'
+2025-06-28 16:23:52 [http-nio-8080-exec-7] DEBUG o.s.ldap.core.LdapTemplate - Executing search with base [] and filter [(objectClass=person)]
+2025-06-28 16:23:52 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 102 entries
+2025-06-28 16:24:04 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: dc=example,dc=com
+2025-06-28 16:24:04 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - No authentication header provided, proceeding with anonymous bind
+2025-06-28 16:24:04 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: anonymous
+2025-06-28 16:24:04 [http-nio-8080-exec-8] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-06-28 16:24:04 [http-nio-8080-exec-8] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-06-28 16:24:04 [http-nio-8080-exec-8] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-06-28 16:24:04 [http-nio-8080-exec-8] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389/dc=example,dc=com
+2025-06-28 16:24:04 [http-nio-8080-exec-8] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389/dc=example,dc=com'
+2025-06-28 16:24:04 [http-nio-8080-exec-8] DEBUG o.s.ldap.core.LdapTemplate - Executing search with base [] and filter [(objectClass=person)]
+2025-06-28 16:24:04 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 102 entries
+2025-06-28 16:24:46 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: dc=example,dc=com
+2025-06-28 16:24:46 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - No authentication header provided, proceeding with anonymous bind
+2025-06-28 16:24:46 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: anonymous
+2025-06-28 16:24:46 [http-nio-8080-exec-9] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-06-28 16:24:46 [http-nio-8080-exec-9] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-06-28 16:24:46 [http-nio-8080-exec-9] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-06-28 16:24:46 [http-nio-8080-exec-9] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389/dc=example,dc=com
+2025-06-28 16:24:46 [http-nio-8080-exec-9] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389/dc=example,dc=com'
+2025-06-28 16:24:46 [http-nio-8080-exec-9] DEBUG o.s.ldap.core.LdapTemplate - Executing search with base [] and filter [(objectClass=person)]
+2025-06-28 16:24:46 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 102 entries
+2025-06-28 16:25:05 [http-nio-8080-exec-2] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 222 ms
+2025-06-28 16:25:38 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: dc=example,dc=com
+2025-06-28 16:25:38 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - No authentication header provided, proceeding with anonymous bind
+2025-06-28 16:25:38 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: anonymous
+2025-06-28 16:25:38 [http-nio-8080-exec-7] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-06-28 16:25:38 [http-nio-8080-exec-7] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-06-28 16:25:38 [http-nio-8080-exec-7] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-06-28 16:25:38 [http-nio-8080-exec-7] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389/dc=example,dc=com
+2025-06-28 16:25:38 [http-nio-8080-exec-7] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389/dc=example,dc=com'
+2025-06-28 16:25:38 [http-nio-8080-exec-7] DEBUG o.s.ldap.core.LdapTemplate - Executing search with base [] and filter [(objectClass=person)]
+2025-06-28 16:25:38 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 102 entries
+2025-06-28 16:26:31 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-28 16:26:31 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-28 16:27:58 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Starting LdaptoolApplication using Java 21.0.7 with PID 56919 (/home/jheer/Documents/git/ldaptool/target/classes started by jheer in /home/jheer/Documents/git/ldaptool)
+2025-06-28 16:27:58 [main] INFO  c.heer.ldaptool.LdaptoolApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-28 16:27:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data LDAP repositories in DEFAULT mode.
+2025-06-28 16:27:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 LDAP repository interfaces.
+2025-06-28 16:27:58 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-28 16:27:58 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-28 16:27:58 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-06-28 16:27:58 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-28 16:27:58 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 713 ms
+2025-06-28 16:27:58 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-28 16:27:59 [main] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-06-28 16:27:59 [main] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-06-28 16:27:59 [main] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-06-28 16:27:59 [main] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:389
+2025-06-28 16:27:59 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-28 16:27:59 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Started LdaptoolApplication in 1.435 seconds (process running for 1.619)
+2025-06-28 16:28:32 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-28 16:28:32 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-28 16:28:32 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-28 16:28:32 [http-nio-8080-exec-3] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 163 ms
+2025-06-28 16:29:39 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: uid=user.99,ou=People,dc=example,dc=com
+2025-06-28 16:29:39 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - Authentication credentials extracted for DN: cn=Directory Manager
+2025-06-28 16:29:39 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: cn=Directory Manager
+2025-06-28 16:29:39 [http-nio-8080-exec-5] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-06-28 16:29:39 [http-nio-8080-exec-5] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-06-28 16:29:39 [http-nio-8080-exec-5] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389/uid=user.99,ou=People,dc=example,dc=com
+2025-06-28 16:29:39 [http-nio-8080-exec-5] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389/uid=user.99,ou=People,dc=example,dc=com'
+2025-06-28 16:29:39 [http-nio-8080-exec-5] DEBUG o.s.ldap.core.LdapTemplate - Executing search with base [] and filter [(objectClass=person)]
+2025-06-28 16:29:39 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 1 entries
+2025-06-28 16:33:06 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: uid=user.99,ou=People,dc=example,dc=com
+2025-06-28 16:33:06 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - Authentication credentials extracted for DN: cn=Directory Manager
+2025-06-28 16:33:06 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: cn=Directory Manager
+2025-06-28 16:33:06 [http-nio-8080-exec-7] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-06-28 16:33:06 [http-nio-8080-exec-7] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-06-28 16:33:06 [http-nio-8080-exec-7] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389/uid=user.99,ou=People,dc=example,dc=com
+2025-06-28 16:33:06 [http-nio-8080-exec-7] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389/uid=user.99,ou=People,dc=example,dc=com'
+2025-06-28 16:33:06 [http-nio-8080-exec-7] DEBUG o.s.ldap.core.LdapTemplate - Executing search with base [] and filter [(objectClass=person)]
+2025-06-28 16:33:06 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 1 entries
+2025-06-28 16:33:54 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: uid=user.99,ou=People,dc=example,dc=com
+2025-06-28 16:33:54 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - Authentication credentials extracted for DN: cn=Directory Manager
+2025-06-28 16:33:54 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: cn=Directory Manager
+2025-06-28 16:33:54 [http-nio-8080-exec-8] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-06-28 16:33:54 [http-nio-8080-exec-8] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-06-28 16:33:54 [http-nio-8080-exec-8] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389/uid=user.99,ou=People,dc=example,dc=com
+2025-06-28 16:33:54 [http-nio-8080-exec-8] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389/uid=user.99,ou=People,dc=example,dc=com'
+2025-06-28 16:33:54 [http-nio-8080-exec-8] DEBUG o.s.ldap.core.LdapTemplate - Executing search with base [] and filter [(objectClass=person)]
+2025-06-28 16:33:54 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 1 entries
+2025-06-28 16:35:51 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-28 16:35:51 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
