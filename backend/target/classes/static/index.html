@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ldapApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LDAP Tool</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .container-fluid {
+            padding: 2rem;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border-radius: 15px 15px 0 0 !important;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .nav-pills .nav-link {
+            border-radius: 25px;
+            margin: 0 0.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-pills .nav-link.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+        }
+        
+        .nav-pills .nav-link:not(.active) {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+        }
+        
+        .nav-pills .nav-link:hover {
+            cursor: pointer;
+            background: rgba(102, 126, 234, 0.2) !important;
+            color: #495057 !important;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+        }
+        
+        .form-label {
+            font-weight: 600;
+            color: #495057;
+        }
+        
+        .form-control, .form-select {
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+        
+        .btn {
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%);
+            border: none;
+        }
+        
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(86, 171, 47, 0.4);
+        }
+        
+        .alert {
+            border-radius: 10px;
+            border: none;
+            margin-top: 1rem;
+        }
+        
+        .results-container {
+            max-height: 400px;
+            overflow-y: auto;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .json-output {
+            background: #2d3748;
+            color: #a0aec0;
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            font-size: 0.9rem;
+        }
+        
+        .ldap-entry {
+            background: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .ldap-entry-dn {
+            font-weight: bold;
+            color: #495057;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+            font-size: 0.95rem;
+        }
+        
+        .ldap-attribute {
+            margin-bottom: 0.5rem;
+        }
+        
+        .ldap-attribute-name {
+            font-weight: 600;
+            color: #667eea;
+            margin-right: 0.5rem;
+            min-width: 120px;
+            display: inline-block;
+        }
+        
+        .ldap-attribute-value {
+            color: #495057;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        
+        .ldap-multi-value {
+            margin-left: 128px;
+            margin-top: 0.25rem;
+        }
+        
+        .results-toggle {
+            margin-bottom: 1rem;
+        }
+        
+        .results-stats {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #667eea;
+        }
+        
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .modification-item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #667eea;
+        }
+        
+        .icon-button {
+            border: none;
+            background: none;
+            color: #dc3545;
+            padding: 0.25rem;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .icon-button:hover {
+            background: rgba(220, 53, 69, 0.1);
+        }
+        
+        .value-input {
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-icon {
+            margin-right: 0.5rem;
+            font-size: 1.2em;
+        }
+        
+        /* Browse tree styles */
+        .browse-tree {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1rem;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        
+        .tree-node {
+            margin-bottom: 0.5rem;
+        }
+        
+        .tree-node-content {
+            padding: 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .tree-node-content:hover {
+            background: rgba(102, 126, 234, 0.1);
+        }
+        
+        .tree-node-content.selected {
+            background: rgba(102, 126, 234, 0.2);
+            font-weight: bold;
+        }
+        
+        .tree-toggle {
+            margin-right: 0.5rem;
+            width: 20px;
+            text-align: center;
+            color: #667eea;
+            font-size: 0.9rem;
+        }
+        
+        .tree-icon {
+            margin-right: 0.5rem;
+            color: #667eea;
+            width: 16px;
+        }
+        
+        .tree-label {
+            flex: 1;
+            font-size: 0.9rem;
+        }
+        
+        .tree-children {
+            margin-left: 1.5rem;
+            border-left: 2px dotted #dee2e6;
+            padding-left: 0.5rem;
+        }
+        
+        .tree-loading {
+            color: #6c757d;
+            font-style: italic;
+            font-size: 0.8rem;
+            margin-left: 2rem;
+        }
+        
+        .browse-connection {
+            background: #e9ecef;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .browse-details {
+            background: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .browse-entry-dn {
+            font-weight: bold;
+            color: #495057;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+            font-size: 0.95rem;
+        }
+         /* Ensure only one tab content is shown at a time */
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Show connection tab by default */
+        .tab-content:first-of-type {
+            display: block;
+        }
+        
+        /* Hide Angular directives until app loads */
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+</head>
+<body ng-controller="LdapController" ng-cloak>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-10">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="mb-0">
+                            <i class="fas fa-server header-icon"></i>
+                            LDAP Management Tool
+                        </h1>
+                        <p class="mb-0 mt-2">Perform LDAP search and modify operations</p>
+                    </div>
+                    <div class="card-body p-4">
+                        <!-- Navigation Tabs -->
+                        <ul class="nav nav-pills justify-content-center mb-4">
+                            <li class="nav-item">
+                                <a class="nav-link" ng-class="{'active': activeTab === 'connection'}" ng-click="setActiveTab('connection')">
+                                    <i class="fas fa-plug me-2"></i>Connection
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" ng-class="{'active': activeTab === 'search'}" ng-click="setActiveTab('search')">
+                                    <i class="fas fa-search me-2"></i>LDAP Search
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" ng-class="{'active': activeTab === 'browse'}" ng-click="setActiveTab('browse')">
+                                    <i class="fas fa-sitemap me-2"></i>LDAP Browse
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" ng-class="{'active': activeTab === 'modify'}" ng-click="setActiveTab('modify')">
+                                    <i class="fas fa-edit me-2"></i>LDAP Modify
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Connection Configuration -->
+                        <div ng-show="activeTab === 'connection'" class="tab-content" ng-class="{'active': activeTab === 'connection'}" ng-cloak>
+                            
+                            <!-- Saved Connections Section -->
+                            <div class="card mb-4" ng-if="savedConnections.length > 0">
+                                <div class="card-body">
+                                    <h6 class="card-title">
+                                        <i class="fas fa-bookmark me-2"></i>Saved Connections
+                                    </h6>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <select class="form-select" ng-model="selectedSavedConnection" ng-change="loadSavedConnection()">
+                                                <option value="">Select a saved connection...</option>
+                                                <option ng-repeat="conn in savedConnections" ng-value="conn.name">
+                                                    <span ng-bind="conn.name"></span> (<span ng-bind="conn.host"></span><span ng-if="conn.port">:<span ng-bind="conn.port"></span></span>)
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <button type="button" class="btn btn-outline-danger btn-sm" 
+                                                    ng-click="deleteSavedConnection(selectedSavedConnection)" 
+                                                    ng-disabled="!selectedSavedConnection">
+                                                <i class="fas fa-trash me-1"></i>Delete
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <form ng-submit="testConnection()" name="connectionForm">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">
+                                                <i class="fas fa-server me-2"></i>LDAP Host *
+                                            </label>
+                                            <input type="text" class="form-control" ng-model="connectionConfig.host" 
+                                                   placeholder="ldap.example.com" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <label class="form-label">
+                                                <i class="fas fa-network-wired me-2"></i>Port
+                                            </label>
+                                            <input type="number" class="form-control" ng-model="connectionConfig.port" 
+                                                   placeholder="389 or 636">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="mb-3">
+                                            <label class="form-label">
+                                                <i class="fas fa-shield-alt me-2"></i>Use SSL
+                                            </label>
+                                            <div class="form-check form-switch mt-2">
+                                                <input class="form-check-input" type="checkbox" ng-model="connectionConfig.useSSL">
+                                                <label class="form-check-label">Enable SSL/TLS</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">
+                                                <i class="fas fa-user me-2"></i>Bind DN (optional)
+                                            </label>
+                                            <input type="text" class="form-control" ng-model="connectionConfig.bindDn" 
+                                                   placeholder="cn=admin,dc=example,dc=com">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">
+                                                <i class="fas fa-key me-2"></i>Password
+                                            </label>
+                                            <input type="password" class="form-control" ng-model="connectionConfig.password" 
+                                                   placeholder="Enter password">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg me-2" ng-disabled="connectionTesting || connectionForm.$invalid">
+                                        <span ng-if="connectionTesting" class="loading-spinner me-2"></span>
+                                        <i ng-if="!connectionTesting" class="fas fa-plug me-2"></i>
+                                        <span ng-if="connectionTesting">Testing...</span>
+                                        <span ng-if="!connectionTesting">Test Connection</span>
+                                        <!-- Fallback text if Angular doesn't load -->
+                                        <span class="angular-fallback" style="display: none;">Test Connection</span>
+                                    </button>
+                                    <button type="button" class="btn btn-secondary btn-lg me-2" ng-click="clearConnection()" ng-disabled="connectionTesting">
+                                        <i class="fas fa-times me-2"></i>Clear
+                                    </button>
+                                    <button type="button" class="btn btn-info btn-lg me-2" ng-click="generateBookmarkUrl()" ng-disabled="!connectionConfig.host">
+                                        <i class="fas fa-link me-2"></i>Get Bookmark URL
+                                    </button>
+                                    <button type="button" class="btn btn-success btn-lg" ng-click="showSaveForm = !showSaveForm" ng-disabled="!connectionConfig.host">
+                                        <i class="fas fa-save me-2"></i>Save Connection
+                                    </button>
+                                </div>
+                            </form>
+                            
+                            <!-- Save Connection Form -->
+                            <div ng-if="showSaveForm" class="mt-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">
+                                            <i class="fas fa-bookmark me-2"></i>Save This Connection
+                                        </h6>
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" ng-model="connectionForm.newConnectionName" 
+                                                       placeholder="Enter a name for this connection" maxlength="50">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <button type="button" class="btn btn-success me-2" ng-click="saveConnection()" ng-disabled="!connectionForm.newConnectionName || !connectionForm.newConnectionName.trim()">
+                                                    <i class="fas fa-check me-1"></i>Save
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" ng-click="showSaveForm = false">
+                                                    <i class="fas fa-times me-1"></i>Cancel
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Connection Test Results -->
+                            <div ng-if="connectionTestResult" class="mt-3">
+                                <div ng-if="connectionTestResult.success" class="alert alert-success">
+                                    <i class="fas fa-check-circle me-2"></i>
+                                    <span ng-bind="connectionTestResult.message"></span>
+                                </div>
+                                <div ng-if="!connectionTestResult.success" class="alert alert-danger">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    <span ng-bind="connectionTestResult.message"></span>
+                                </div>
+                            </div>
+                            
+                            <!-- Connection Status -->
+                            <div ng-if="connectionConfig.connected" class="alert alert-info mt-3">
+                                <i class="fas fa-info-circle me-2"></i>
+                                Connected to <strong><span ng-bind="connectionConfig.host"></span>:<span ng-bind="connectionConfig.port"></span></strong>
+                                <span ng-if="connectionConfig.useSSL">(SSL)</span>
+                                <span ng-if="connectionConfig.bindDn">as <strong><span ng-bind="connectionConfig.bindDn"></span></strong></span>
+                            </div>
+                        </div>
+
+                        <!-- LDAP Search Form -->
+                        <div ng-show="activeTab === 'search'" class="tab-content" ng-class="{'active': activeTab === 'search'}" ng-cloak>
+                            <!-- Connection Status Check -->
+                            <div ng-if="!connectionConfig.connected" class="alert alert-warning">
+                                <i class="fas fa-exclamation-triangle me-2"></i>
+                                Please configure and test your connection in the <a href="#" ng-click="setActiveTab('connection')" class="alert-link">Connection</a> tab first.
+                            </div>
+                            
+                            <form ng-submit="performSearch()" name="searchForm">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">
+                                                <i class="fas fa-sitemap me-2"></i>Base DN *
+                                            </label>
+                                            <input type="text" class="form-control" ng-model="searchRequest.base" 
+                                                   placeholder="dc=example,dc=com" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">
+                                                <i class="fas fa-filter me-2"></i>Search Filter *
+                                            </label>
+                                            <input type="text" class="form-control" ng-model="searchRequest.filter" 
+                                                   placeholder="(objectClass=*)" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label class="form-label">
+                                                <i class="fas fa-layer-group me-2"></i>Search Scope
+                                            </label>
+                                            <select class="form-select" ng-model="searchRequest.scope">
+                                                <option value="sub">Subtree</option>
+                                                <option value="one">One Level</option>
+                                                <option value="base">Base Object</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="mb-3">
+                                            <label class="form-label">
+                                                <i class="fas fa-list me-2"></i>Attributes (comma-separated, * for all)
+                                            </label>
+                                            <input type="text" class="form-control" ng-model="attributesString" 
+                                                   placeholder="cn,mail,telephoneNumber or * for all">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg" ng-disabled="searchLoading || searchForm.$invalid || !connectionConfig.connected">
+                                        <span ng-if="searchLoading" class="loading-spinner me-2"></span>
+                                        <i ng-if="!searchLoading" class="fas fa-search me-2"></i>
+                                        <span ng-if="searchLoading">Searching...</span>
+                                        <span ng-if="!searchLoading">Perform Search</span>
+                                    </button>
+                                </div>
+                            </form>
+
+                            <!-- Search Results -->
+                            <div ng-if="searchResult" class="results-container">
+                                <div ng-if="searchResult.success" class="alert alert-success">
+                                    <i class="fas fa-check-circle me-2"></i>
+                                    Search completed successfully. Found <span ng-bind="searchResult.entries ? searchResult.entries.length : 0"></span> entries.
+                                </div>
+                                <div ng-if="!searchResult.success" class="alert alert-danger">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    <span ng-bind="searchResult.message || searchResult.errorMessage"></span>
+                                </div>
+                                
+                                <!-- Results Display Options -->
+                                <div ng-if="searchResult.success && searchResult.entries && searchResult.entries.length > 0">
+                                    <div class="results-stats">
+                                        <strong><i class="fas fa-info-circle me-2"></i>Search Statistics:</strong>
+                                        <span ng-bind="searchResult.entries.length"></span> entries found
+                                    </div>
+                                    
+                                    <div class="results-toggle">
+                                        <div class="btn-group" role="group">
+                                            <button type="button" class="btn btn-sm" ng-class="viewMode === 'formatted' ? 'btn-primary' : 'btn-outline-primary'" ng-click="viewMode = 'formatted'">
+                                                <i class="fas fa-list me-1"></i>Formatted View
+                                            </button>
+                                            <button type="button" class="btn btn-sm" ng-class="viewMode === 'json' ? 'btn-primary' : 'btn-outline-primary'" ng-click="viewMode = 'json'">
+                                                <i class="fas fa-code me-1"></i>JSON View
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Formatted View -->
+                                    <div ng-if="!viewMode || viewMode === 'formatted'">
+                                        <div ng-repeat="entry in searchResult.entries track by $index" class="ldap-entry">
+                                            <div class="ldap-entry-dn">
+                                                <i class="fas fa-sitemap me-2"></i><span ng-bind="entry.dn || 'DN not available'"></span>
+                                            </div>
+                                            <div ng-repeat="(attrName, attrValue) in entry" ng-if="attrName !== 'dn'" class="ldap-attribute">
+                                                <span class="ldap-attribute-name" ng-bind="attrName + ':'"></span>
+                                                <span class="ldap-attribute-value" ng-if="!isArray(attrValue)" ng-bind="attrValue"></span>
+                                                <div ng-if="isArray(attrValue)">
+                                                    <div ng-repeat="value in attrValue track by $index" class="ldap-attribute-value" ng-class="{'ldap-multi-value': $index > 0}">
+                                                        <span ng-bind="value"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- JSON View -->
+                                    <div ng-if="viewMode === 'json'" class="json-output"><pre ng-bind="formatJson(searchResult.entries)"></pre></div>
+                                </div>
+                                
+                                <div ng-if="searchResult.success && (!searchResult.entries || searchResult.entries.length === 0)" class="alert alert-info">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    No entries found matching the search criteria.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LDAP Browse Form -->
+                        <div ng-show="activeTab === 'browse'" class="tab-content" ng-class="{'active': activeTab === 'browse'}" ng-cloak>
+                            <!-- Connection Status Check -->
+                            <div ng-if="!connectionConfig.connected" class="alert alert-warning">
+                                <i class="fas fa-exclamation-triangle me-2"></i>
+                                Please configure and test your connection in the <a href="#" ng-click="setActiveTab('connection')" class="alert-link">Connection</a> tab first.
+                            </div>
+                            
+                            <!-- Browse Controls -->
+                            <div class="browse-connection" ng-if="connectionConfig.connected">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5><i class="fas fa-sitemap me-2"></i>LDAP Directory Browser</h5>
+                                        <p class="text-muted mb-0">Automatically browse from the Root DN of your LDAP directory</p>
+                                        <small class="text-info" ng-if="browseRequest.base">
+                                            <i class="fas fa-info-circle me-1"></i>Root DN: <span ng-bind="browseRequest.base"></span>
+                                        </small>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn btn-primary" ng-click="autoConnectToBrowse()" 
+                                                ng-disabled="browseLoading || !connectionConfig.connected">
+                                            <span ng-if="browseLoading" class="loading-spinner me-2"></span>
+                                            <i ng-if="!browseLoading" class="fas fa-sitemap me-2"></i>
+                                            <span ng-if="browseLoading">Loading...</span>
+                                            <span ng-if="!browseLoading">Browse Directory</span>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary ms-2" ng-click="disconnectBrowse()" ng-if="browseConnected">
+                                            <i class="fas fa-times me-2"></i>Disconnect
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Browse Tree -->
+                            <div ng-if="browseConnected">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h5><i class="fas fa-sitemap me-2"></i>Directory Tree</h5>
+                                    <div class="btn-group btn-group-sm">
+                                        <button type="button" class="btn btn-outline-primary" ng-click="expandAll()" ng-disabled="browseLoading">
+                                            <i class="fas fa-plus me-1"></i>Expand All
+                                        </button>
+                                        <button type="button" class="btn btn-outline-primary" ng-click="collapseAll()" ng-disabled="browseLoading">
+                                            <i class="fas fa-minus me-1"></i>Collapse All
+                                        </button>
+                                        <button type="button" class="btn btn-outline-secondary" ng-click="autoConnectToBrowse()" ng-disabled="browseLoading">
+                                            <i class="fas fa-refresh me-1"></i>Refresh
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="browse-tree">
+                                    <div ng-if="browseLoading" class="text-center text-muted py-4">
+                                        <div class="loading-spinner me-2"></div>
+                                        Loading LDAP directory tree...
+                                    </div>
+                                    
+                                    <div ng-if="!browseLoading && (!browseTree || browseTree.length === 0)" class="text-center text-muted py-4">
+                                        <i class="fas fa-info-circle me-2"></i>
+                                        No entries found or connection not established.
+                                    </div>
+                                    
+                                    <div ng-if="!browseLoading" ng-repeat="node in browseTree" class="tree-node">
+                                        <div ng-include="'tree-node-template'"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Entry Details -->
+                                <div ng-if="selectedEntry" class="browse-details">
+                                    <h6><i class="fas fa-info-circle me-2"></i>Entry Details</h6>
+                                    <div class="browse-entry-dn">
+                                        <i class="fas fa-sitemap me-2"></i><span ng-bind="selectedEntry.dn"></span>
+                                    </div>
+                                    <div ng-repeat="(attrName, attrValue) in selectedEntry" ng-if="attrName !== 'dn'" class="ldap-attribute">
+                                        <span class="ldap-attribute-name" ng-bind="attrName + ':'"></span>
+                                        <span class="ldap-attribute-value" ng-if="!isArray(attrValue)" ng-bind="attrValue"></span>
+                                        <div ng-if="isArray(attrValue)">
+                                            <div ng-repeat="value in attrValue track by $index" class="ldap-attribute-value" ng-class="{'ldap-multi-value': $index > 0}">
+                                                <span ng-bind="value"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Browse Error Display -->
+                            <div ng-if="browseError" class="alert alert-danger mt-3">
+                                <i class="fas fa-exclamation-triangle me-2"></i>
+                                <span ng-bind="browseError"></span>
+                            </div>
+                            
+                            <!-- Manual DN Input (fallback) -->
+                            <div ng-if="showManualDnInput" class="alert alert-info mt-3">
+                                <h6><i class="fas fa-hand me-2"></i>Manual Base DN Entry</h6>
+                                <p class="mb-3">Auto-detection failed. Please enter the Base DN manually:</p>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" ng-model="browseRequest.base" 
+                                               placeholder="dc=example,dc=com">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-primary" ng-click="manualConnectToBrowse()" 
+                                                ng-disabled="browseLoading">
+                                            <span ng-if="browseLoading" class="loading-spinner me-2"></span>
+                                            <i ng-if="!browseLoading" class="fas fa-sitemap me-2"></i>
+                                            <span ng-if="browseLoading">Connecting...</span>
+                                            <span ng-if="!browseLoading">Browse</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LDAP Modify Form -->
+                        <div ng-show="activeTab === 'modify'" class="tab-content" ng-class="{'active': activeTab === 'modify'}" ng-cloak>
+                            <!-- Connection Status Check -->
+                            <div ng-if="!connectionConfig.connected" class="alert alert-warning">
+                                <i class="fas fa-exclamation-triangle me-2"></i>
+                                Please configure and test your connection in the <a href="#" ng-click="setActiveTab('connection')" class="alert-link">Connection</a> tab first.
+                            </div>
+                            
+                            <form ng-submit="performModify()" name="modifyForm">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">
+                                                <i class="fas fa-crosshairs me-2"></i>Target DN *
+                                            </label>
+                                            <input type="text" class="form-control" ng-model="modifyRequest.dn" 
+                                                   placeholder="cn=user,ou=people,dc=example,dc=com" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Modifications Section -->
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h5><i class="fas fa-cogs me-2"></i>Modifications</h5>
+                                        <button type="button" class="btn btn-outline-primary btn-sm" ng-click="addModification()">
+                                            <i class="fas fa-plus me-1"></i>Add Modification
+                                        </button>
+                                    </div>
+
+                                    <div ng-repeat="mod in modifyRequest.modifications track by $index" class="modification-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-3">
+                                                <select class="form-select" ng-model="mod.operation" required>
+                                                    <option value="">Select Operation</option>
+                                                    <option value="ADD_ATTRIBUTE">Add Attribute</option>
+                                                    <option value="REPLACE_ATTRIBUTE">Replace Attribute</option>
+                                                    <option value="REMOVE_ATTRIBUTE">Remove Attribute</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <input type="text" class="form-control" ng-model="mod.attribute" 
+                                                       placeholder="Attribute name" required>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div ng-repeat="value in mod.values track by $index" class="value-input">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" ng-model="mod.values[$index]" 
+                                                               placeholder="Attribute value">
+                                                        <button type="button" class="btn btn-outline-danger btn-sm" 
+                                                                ng-click="removeValue(mod, $index)" ng-if="mod.values.length > 1">
+                                                            <i class="fas fa-minus"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm" 
+                                                        ng-click="addValue(mod)">
+                                                    <i class="fas fa-plus me-1"></i>Add Value
+                                                </button>
+                                            </div>
+                                            <div class="col-md-1 text-end">
+                                                <button type="button" class="icon-button" ng-click="removeModification($index)">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div ng-if="modifyRequest.modifications.length === 0" class="text-center text-muted py-4">
+                                        <i class="fas fa-info-circle me-2"></i>
+                                        No modifications added yet. Click "Add Modification" to start.
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-success btn-lg" 
+                                            ng-disabled="modifyLoading || modifyForm.$invalid || modifyRequest.modifications.length === 0 || !connectionConfig.connected">
+                                        <span ng-if="modifyLoading" class="loading-spinner me-2"></span>
+                                        <i ng-if="!modifyLoading" class="fas fa-save me-2"></i>
+                                        <span ng-if="modifyLoading">Modifying...</span>
+                                        <span ng-if="!modifyLoading">Apply Modifications</span>
+                                    </button>
+                                </div>
+                            </form>
+
+                            <!-- Modify Results -->
+                            <div ng-if="modifyResult" class="results-container">
+                                <div ng-if="modifyResult.success" class="alert alert-success">
+                                    <i class="fas fa-check-circle me-2"></i>
+                                    <span ng-bind="modifyResult.message"></span>
+                                </div>
+                                <div ng-if="!modifyResult.success" class="alert alert-danger">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    <span ng-bind="modifyResult.errorMessage"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Fallback functionality if Angular fails to load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if Angular is working after a short delay
+            setTimeout(function() {
+                // Look for unprocessed Angular directives
+                var hasAngularDirectives = document.querySelector('[ng-if]') !== null;
+                var hasUnprocessedHandlebars = document.body.innerHTML.includes('{{');
+                
+                console.log('Angular check:', {
+                    hasDirectives: hasAngularDirectives,
+                    hasUnprocessedHandlebars: hasUnprocessedHandlebars,
+                    angularExists: typeof angular !== 'undefined'
+                });
+                
+                // If Angular isn't working, show fallback elements
+                if (hasUnprocessedHandlebars || (hasAngularDirectives && typeof angular === 'undefined')) {
+                    console.log('Angular not working, enabling fallbacks');
+                    var fallbacks = document.querySelectorAll('.angular-fallback');
+                    fallbacks.forEach(function(el) {
+                        el.style.display = 'inline';
+                    });
+                    
+                    // Add basic form functionality
+                    setupFallbackForm();
+                }
+            }, 2000);
+            
+            function setupFallbackForm() {
+                // Basic connection test without Angular
+                var form = document.querySelector('form[name="connectionForm"]');
+                if (form) {
+                    form.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        
+                        var host = document.querySelector('input[ng-model="connectionConfig.host"]').value;
+                        var port = document.querySelector('input[ng-model="connectionConfig.port"]').value;
+                        var useSSL = document.querySelector('input[ng-model="connectionConfig.useSSL"]').checked;
+                        var bindDn = document.querySelector('input[ng-model="connectionConfig.bindDn"]').value;
+                        var password = document.querySelector('input[ng-model="connectionConfig.password"]').value;
+                        
+                        if (!host) {
+                            alert('Please enter a host');
+                            return;
+                        }
+                        
+                        var button = form.querySelector('button[type="submit"]');
+                        button.disabled = true;
+                        button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Testing...';
+                        
+                        // Make connection test request
+                        var testRequest = {
+                            host: host,
+                            port: port ? parseInt(port) : null,
+                            useSSL: useSSL
+                        };
+                        
+                        var headers = {
+                            'Content-Type': 'application/json'
+                        };
+                        
+                        if (bindDn && bindDn.trim()) {
+                            headers['Authorization'] = 'Basic ' + btoa(bindDn + ':' + (password || ''));
+                        }
+                        
+                        fetch('/ldap/test-connection', {
+                            method: 'POST',
+                            headers: headers,
+                            body: JSON.stringify(testRequest)
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            button.disabled = false;
+                            button.innerHTML = '<i class="fas fa-plug me-2"></i>Test Connection';
+                            
+                            // Show result
+                            var resultDiv = document.createElement('div');
+                            resultDiv.className = 'mt-3 alert ' + (data.success ? 'alert-success' : 'alert-danger');
+                            resultDiv.innerHTML = '<i class="fas fa-' + (data.success ? 'check-circle' : 'exclamation-triangle') + ' me-2"></i>' + data.message;
+                            
+                            // Remove any existing results
+                            var existingResult = form.parentNode.querySelector('.alert');
+                            if (existingResult) {
+                                existingResult.remove();
+                            }
+                            
+                            form.parentNode.appendChild(resultDiv);
+                        })
+                        .catch(error => {
+                            button.disabled = false;
+                            button.innerHTML = '<i class="fas fa-plug me-2"></i>Test Connection';
+                            alert('Connection test failed: ' + error.message);
+                        });
+                    });
+                }
+            }
+            
+            // Tab functionality fallback
+            var tabLinks = document.querySelectorAll('.nav-link');
+            var tabContents = document.querySelectorAll('.tab-content');
+            
+            tabLinks.forEach(function(link, index) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all tabs and contents
+                    tabLinks.forEach(function(l) { l.classList.remove('active'); });
+                    tabContents.forEach(function(c) { c.classList.remove('active'); });
+                    
+                    // Add active class to clicked tab and corresponding content
+                    link.classList.add('active');
+                    if (tabContents[index]) {
+                        tabContents[index].classList.add('active');
+                    }
+                });
+            });
+            
+            // Activate first tab by default
+            if (tabLinks.length > 0) {
+                tabLinks[0].classList.add('active');
+                if (tabContents.length > 0) {
+                    tabContents[0].classList.add('active');
+                }
+            }
+        });
+    </script>
+
+    <!-- Tree Node Template -->
+    <script type="text/ng-template" id="tree-node-template">
+        <div class="tree-node-content" ng-class="{'selected': node.selected}" ng-click="selectNode(node)">
+            <span class="tree-toggle" ng-click="toggleNode(node, $event)">
+                <i ng-if="node.hasChildren && !node.expanded" class="fas fa-chevron-right"></i>
+                <i ng-if="node.hasChildren && node.expanded" class="fas fa-chevron-down"></i>
+                <span ng-if="!node.hasChildren">&nbsp;</span>
+            </span>
+            <i class="tree-icon fas" ng-class="getNodeIcon(node)"></i>
+            <span class="tree-label" ng-bind="getNodeLabel(node)"></span>
+            <span ng-if="node.loading" class="tree-loading">Loading...</span>
+        </div>
+        <div ng-if="node.expanded && node.children" class="tree-children">
+            <div ng-repeat="child in node.children" class="tree-node">
+                <div ng-include="'tree-node-template'" ng-init="node = child"></div>
+            </div>
+        </div>
+    </script>
+</body>
+</html>

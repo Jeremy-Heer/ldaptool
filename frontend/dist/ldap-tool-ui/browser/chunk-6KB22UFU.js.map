@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/modify/modify.component.ts"],
+  "sourcesContent": ["import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'app-modify',\n  imports: [CommonModule],\n  template: `\n    <div class=\"modify-container\">\n      <h2>LDAP Entry Modification</h2>\n      <p>This component will provide LDAP entry modification functionality.</p>\n      <p><em>Coming soon: Add, replace, and delete operations on LDAP entries</em></p>\n    </div>\n  `,\n  styles: [`\n    .modify-container {\n      padding: 2rem;\n      text-align: center;\n    }\n    h2 {\n      color: #667eea;\n      margin-bottom: 1rem;\n    }\n    p {\n      color: #666;\n      margin: 0.5rem 0;\n    }\n  `]\n})\nexport class ModifyComponent {}\n"],
+  "mappings": ";;;;;;;;;;;;;;AA4BM,IAAO,kBAAP,MAAO,iBAAe;;qCAAf,kBAAe;EAAA;yEAAf,kBAAe,WAAA,CAAA,CAAA,YAAA,CAAA,GAAA,OAAA,GAAA,MAAA,GAAA,QAAA,CAAA,CAAA,GAAA,kBAAA,CAAA,GAAA,UAAA,SAAA,yBAAA,IAAA,KAAA;AAAA,QAAA,KAAA,GAAA;AArBxB,MAAA,4BAAA,GAAA,OAAA,CAAA,EAA8B,GAAA,IAAA;AACxB,MAAA,iBAAA,GAAA,yBAAA;AAAuB,MAAA,0BAAA;AAC3B,MAAA,4BAAA,GAAA,GAAA;AAAG,MAAA,iBAAA,GAAA,oEAAA;AAAkE,MAAA,0BAAA;AACrE,MAAA,4BAAA,GAAA,GAAA,EAAG,GAAA,IAAA;AAAI,MAAA,iBAAA,GAAA,kEAAA;AAAgE,MAAA,0BAAA,EAAK,EAAI;;oBAL1E,YAAY,GAAA,QAAA,CAAA,iRAAA,EAAA,CAAA;;;sEAuBX,iBAAe,CAAA;UAzB3B;uBACW,cAAY,SACb,CAAC,YAAY,GAAC,UACb;;;;;;KAMT,QAAA,CAAA,uZAAA,EAAA,CAAA;;;;6EAgBU,iBAAe,EAAA,WAAA,mBAAA,UAAA,iDAAA,YAAA,GAAA,CAAA;AAAA,GAAA;",
+  "names": []
+}

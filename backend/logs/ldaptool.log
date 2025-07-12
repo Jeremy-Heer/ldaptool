@@ -1,0 +1,1326 @@
+2025-07-12 07:41:06 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Starting LdaptoolApplication using Java 21.0.7 with PID 7616 (/home/jheer/Documents/git/ldaptool/target/classes started by jheer in /home/jheer/Documents/git/ldaptool)
+2025-07-12 07:41:06 [main] DEBUG c.heer.ldaptool.LdaptoolApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-12 07:41:06 [main] INFO  c.heer.ldaptool.LdaptoolApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-12 07:41:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data LDAP repositories in DEFAULT mode.
+2025-07-12 07:41:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 LDAP repository interfaces.
+2025-07-12 07:41:07 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-12 07:41:07 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-12 07:41:07 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-12 07:41:07 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-12 07:41:07 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1044 ms
+2025-07-12 07:41:08 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-12 07:41:08 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-12 07:41:08 [main] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-07-12 07:41:08 [main] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-07-12 07:41:08 [main] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-07-12 07:41:08 [main] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:389
+2025-07-12 07:41:08 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-12 07:41:08 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Started LdaptoolApplication in 2.06 seconds (process running for 2.279)
+2025-07-12 07:41:19 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-12 07:41:19 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-12 07:41:19 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-12 07:41:42 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 07:41:42 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 07:41:42 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 07:41:42 [http-nio-8080-exec-5] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 07:41:42 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:41:42 [http-nio-8080-exec-5] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:41:42 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 07:41:42 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 07:41:42 [http-nio-8080-exec-5] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 07:41:42 [http-nio-8080-exec-4] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 07:41:42 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - Setting authentication credentials for connection test
+2025-07-12 07:41:42 [http-nio-8080-exec-5] DEBUG c.heer.ldaptool.service.LdapService - Setting authentication credentials for connection test
+2025-07-12 07:41:42 [http-nio-8080-exec-4] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-07-12 07:41:42 [http-nio-8080-exec-5] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-07-12 07:41:42 [http-nio-8080-exec-4] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-07-12 07:41:42 [http-nio-8080-exec-5] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-07-12 07:41:42 [http-nio-8080-exec-5] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389
+2025-07-12 07:41:42 [http-nio-8080-exec-4] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389
+2025-07-12 07:41:42 [http-nio-8080-exec-5] DEBUG c.heer.ldaptool.service.LdapService - Attempting to retrieve root DSE for connection test
+2025-07-12 07:41:42 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - Attempting to retrieve root DSE for connection test
+2025-07-12 07:41:42 [http-nio-8080-exec-4] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389'
+2025-07-12 07:41:42 [http-nio-8080-exec-5] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389'
+2025-07-12 07:41:42 [http-nio-8080-exec-5] DEBUG o.s.ldap.core.LdapTemplate - Executing search with base [] and filter [(objectClass=*)]
+2025-07-12 07:41:42 [http-nio-8080-exec-4] DEBUG o.s.ldap.core.LdapTemplate - Executing search with base [] and filter [(objectClass=*)]
+2025-07-12 07:41:42 [http-nio-8080-exec-4] INFO  c.heer.ldaptool.service.LdapService - Connection test successful - retrieved 1 entries
+2025-07-12 07:41:42 [http-nio-8080-exec-5] INFO  c.heer.ldaptool.service.LdapService - Connection test successful - retrieved 1 entries
+2025-07-12 07:41:42 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 07:41:42 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 07:43:42 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 07:43:42 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 07:43:42 [http-nio-8080-exec-9] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 07:43:42 [http-nio-8080-exec-8] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 07:43:42 [http-nio-8080-exec-9] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:43:42 [http-nio-8080-exec-8] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:43:42 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 07:43:42 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 07:43:42 [http-nio-8080-exec-9] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 07:43:42 [http-nio-8080-exec-8] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 07:43:42 [http-nio-8080-exec-8] DEBUG c.heer.ldaptool.service.LdapService - Setting authentication credentials for connection test
+2025-07-12 07:43:42 [http-nio-8080-exec-9] DEBUG c.heer.ldaptool.service.LdapService - Setting authentication credentials for connection test
+2025-07-12 07:43:42 [http-nio-8080-exec-8] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-07-12 07:43:42 [http-nio-8080-exec-9] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-07-12 07:43:42 [http-nio-8080-exec-8] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-07-12 07:43:42 [http-nio-8080-exec-9] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-07-12 07:43:42 [http-nio-8080-exec-8] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389
+2025-07-12 07:43:42 [http-nio-8080-exec-9] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389
+2025-07-12 07:43:42 [http-nio-8080-exec-8] DEBUG c.heer.ldaptool.service.LdapService - Attempting to retrieve root DSE for connection test
+2025-07-12 07:43:42 [http-nio-8080-exec-9] DEBUG c.heer.ldaptool.service.LdapService - Attempting to retrieve root DSE for connection test
+2025-07-12 07:43:42 [http-nio-8080-exec-8] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389'
+2025-07-12 07:43:42 [http-nio-8080-exec-9] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389'
+2025-07-12 07:43:42 [http-nio-8080-exec-8] DEBUG o.s.ldap.core.LdapTemplate - Executing search with base [] and filter [(objectClass=*)]
+2025-07-12 07:43:42 [http-nio-8080-exec-9] DEBUG o.s.ldap.core.LdapTemplate - Executing search with base [] and filter [(objectClass=*)]
+2025-07-12 07:43:42 [http-nio-8080-exec-8] INFO  c.heer.ldaptool.service.LdapService - Connection test successful - retrieved 1 entries
+2025-07-12 07:43:42 [http-nio-8080-exec-9] INFO  c.heer.ldaptool.service.LdapService - Connection test successful - retrieved 1 entries
+2025-07-12 07:43:42 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 07:43:42 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 07:44:44 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 07:44:44 [http-nio-8080-exec-2] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 07:44:44 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 07:44:44 [http-nio-8080-exec-2] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 07:44:44 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:44:44 [http-nio-8080-exec-2] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:44:44 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 07:44:44 [http-nio-8080-exec-2] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 07:44:44 [http-nio-8080-exec-3] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 07:44:44 [http-nio-8080-exec-2] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 07:44:44 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - Setting authentication credentials for connection test
+2025-07-12 07:44:44 [http-nio-8080-exec-2] DEBUG c.heer.ldaptool.service.LdapService - Setting authentication credentials for connection test
+2025-07-12 07:44:44 [http-nio-8080-exec-3] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-07-12 07:44:44 [http-nio-8080-exec-2] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-07-12 07:44:44 [http-nio-8080-exec-3] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-07-12 07:44:44 [http-nio-8080-exec-2] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-07-12 07:44:44 [http-nio-8080-exec-3] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389
+2025-07-12 07:44:44 [http-nio-8080-exec-2] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389
+2025-07-12 07:44:44 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - Attempting to retrieve root DSE for connection test
+2025-07-12 07:44:44 [http-nio-8080-exec-2] DEBUG c.heer.ldaptool.service.LdapService - Attempting to retrieve root DSE for connection test
+2025-07-12 07:44:44 [http-nio-8080-exec-3] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389'
+2025-07-12 07:44:44 [http-nio-8080-exec-2] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389'
+2025-07-12 07:44:44 [http-nio-8080-exec-3] DEBUG o.s.ldap.core.LdapTemplate - Executing search with base [] and filter [(objectClass=*)]
+2025-07-12 07:44:44 [http-nio-8080-exec-2] DEBUG o.s.ldap.core.LdapTemplate - Executing search with base [] and filter [(objectClass=*)]
+2025-07-12 07:44:44 [http-nio-8080-exec-2] INFO  c.heer.ldaptool.service.LdapService - Connection test successful - retrieved 1 entries
+2025-07-12 07:44:44 [http-nio-8080-exec-3] INFO  c.heer.ldaptool.service.LdapService - Connection test successful - retrieved 1 entries
+2025-07-12 07:44:44 [http-nio-8080-exec-2] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 07:44:44 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 07:46:18 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-12 07:46:18 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-12 07:46:28 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Starting LdaptoolApplication using Java 21.0.7 with PID 9895 (/home/jheer/Documents/git/ldaptool/target/classes started by jheer in /home/jheer/Documents/git/ldaptool)
+2025-07-12 07:46:28 [main] DEBUG c.heer.ldaptool.LdaptoolApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-12 07:46:28 [main] INFO  c.heer.ldaptool.LdaptoolApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-12 07:46:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data LDAP repositories in DEFAULT mode.
+2025-07-12 07:46:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 LDAP repository interfaces.
+2025-07-12 07:46:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-12 07:46:29 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-12 07:46:29 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-12 07:46:29 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-12 07:46:29 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1001 ms
+2025-07-12 07:46:29 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-12 07:46:29 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-12 07:46:29 [main] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-07-12 07:46:29 [main] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-07-12 07:46:29 [main] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-07-12 07:46:29 [main] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:389
+2025-07-12 07:46:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-12 07:46:29 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Started LdaptoolApplication in 2.047 seconds (process running for 2.28)
+2025-07-12 07:46:38 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-12 07:46:38 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-12 07:46:38 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-07-12 07:46:54 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 07:46:54 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 07:46:54 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 07:46:54 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 07:46:54 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:46:54 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:46:54 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 07:46:54 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 07:46:54 [http-nio-8080-exec-3] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 07:46:54 [http-nio-8080-exec-4] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 07:46:54 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - Setting authentication credentials for connection test
+2025-07-12 07:46:54 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - Setting authentication credentials for connection test
+2025-07-12 07:46:54 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - Testing LDAP connection with single connection attempt
+2025-07-12 07:46:54 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - Testing LDAP connection with single connection attempt
+2025-07-12 07:46:54 [http-nio-8080-exec-4] ERROR c.heer.ldaptool.service.LdapService - Connection test failed: Cannot invoke "org.springframework.ldap.core.AuthenticationSource.getPrincipal()" because "this.authenticationSource" is null
+2025-07-12 07:46:54 [http-nio-8080-exec-3] ERROR c.heer.ldaptool.service.LdapService - Connection test failed: Cannot invoke "org.springframework.ldap.core.AuthenticationSource.getPrincipal()" because "this.authenticationSource" is null
+2025-07-12 07:46:54 [http-nio-8080-exec-4] ERROR c.heer.ldaptool.service.LdapService - Authentication failed during connection test
+2025-07-12 07:46:54 [http-nio-8080-exec-3] ERROR c.heer.ldaptool.service.LdapService - Authentication failed during connection test
+2025-07-12 07:46:54 [http-nio-8080-exec-4] WARN  c.h.l.controller.LdapController - LDAP connection test failed for host: localhost
+2025-07-12 07:46:54 [http-nio-8080-exec-3] WARN  c.h.l.controller.LdapController - LDAP connection test failed for host: localhost
+2025-07-12 07:47:06 [http-nio-8080-exec-6] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 07:47:06 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 07:47:06 [http-nio-8080-exec-6] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 07:47:06 [http-nio-8080-exec-5] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 07:47:06 [http-nio-8080-exec-6] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:47:06 [http-nio-8080-exec-5] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:47:06 [http-nio-8080-exec-6] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 07:47:06 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 07:47:06 [http-nio-8080-exec-6] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 07:47:06 [http-nio-8080-exec-5] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 07:47:06 [http-nio-8080-exec-6] DEBUG c.heer.ldaptool.service.LdapService - Setting authentication credentials for connection test
+2025-07-12 07:47:06 [http-nio-8080-exec-5] DEBUG c.heer.ldaptool.service.LdapService - Setting authentication credentials for connection test
+2025-07-12 07:47:06 [http-nio-8080-exec-6] DEBUG c.heer.ldaptool.service.LdapService - Testing LDAP connection with single connection attempt
+2025-07-12 07:47:06 [http-nio-8080-exec-5] DEBUG c.heer.ldaptool.service.LdapService - Testing LDAP connection with single connection attempt
+2025-07-12 07:47:06 [http-nio-8080-exec-6] ERROR c.heer.ldaptool.service.LdapService - Connection test failed: Cannot invoke "org.springframework.ldap.core.AuthenticationSource.getPrincipal()" because "this.authenticationSource" is null
+2025-07-12 07:47:06 [http-nio-8080-exec-5] ERROR c.heer.ldaptool.service.LdapService - Connection test failed: Cannot invoke "org.springframework.ldap.core.AuthenticationSource.getPrincipal()" because "this.authenticationSource" is null
+2025-07-12 07:47:06 [http-nio-8080-exec-6] ERROR c.heer.ldaptool.service.LdapService - Authentication failed during connection test
+2025-07-12 07:47:06 [http-nio-8080-exec-5] ERROR c.heer.ldaptool.service.LdapService - Authentication failed during connection test
+2025-07-12 07:47:06 [http-nio-8080-exec-6] WARN  c.h.l.controller.LdapController - LDAP connection test failed for host: localhost
+2025-07-12 07:47:06 [http-nio-8080-exec-5] WARN  c.h.l.controller.LdapController - LDAP connection test failed for host: localhost
+2025-07-12 07:48:26 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-12 07:48:26 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-12 07:48:30 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Starting LdaptoolApplication using Java 21.0.7 with PID 10760 (/home/jheer/Documents/git/ldaptool/target/classes started by jheer in /home/jheer/Documents/git/ldaptool)
+2025-07-12 07:48:30 [main] DEBUG c.heer.ldaptool.LdaptoolApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-12 07:48:30 [main] INFO  c.heer.ldaptool.LdaptoolApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-12 07:48:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data LDAP repositories in DEFAULT mode.
+2025-07-12 07:48:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 LDAP repository interfaces.
+2025-07-12 07:48:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-12 07:48:31 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-12 07:48:31 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-12 07:48:31 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-12 07:48:31 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 960 ms
+2025-07-12 07:48:31 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-12 07:48:32 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-12 07:48:32 [main] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-07-12 07:48:32 [main] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-07-12 07:48:32 [main] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-07-12 07:48:32 [main] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:389
+2025-07-12 07:48:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-12 07:48:32 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Started LdaptoolApplication in 1.946 seconds (process running for 2.21)
+2025-07-12 07:48:37 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-12 07:48:37 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-12 07:48:37 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-12 07:48:47 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 07:48:47 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 07:48:47 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 07:48:47 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 07:48:47 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:48:47 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:48:47 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 07:48:47 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 07:48:47 [http-nio-8080-exec-3] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 07:48:47 [http-nio-8080-exec-4] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 07:48:47 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - Setting authentication credentials for connection test
+2025-07-12 07:48:47 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - Setting authentication credentials for connection test
+2025-07-12 07:48:47 [http-nio-8080-exec-4] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-07-12 07:48:47 [http-nio-8080-exec-3] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-07-12 07:48:47 [http-nio-8080-exec-4] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-07-12 07:48:47 [http-nio-8080-exec-3] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-07-12 07:48:47 [http-nio-8080-exec-3] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389
+2025-07-12 07:48:47 [http-nio-8080-exec-4] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:1389
+2025-07-12 07:48:47 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - Testing LDAP connection with single connection attempt
+2025-07-12 07:48:47 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - Testing LDAP connection with single connection attempt
+2025-07-12 07:48:48 [http-nio-8080-exec-3] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389'
+2025-07-12 07:48:48 [http-nio-8080-exec-4] DEBUG o.s.l.c.s.AbstractContextSource - Got Ldap context on server 'ldap://localhost:1389'
+2025-07-12 07:48:48 [http-nio-8080-exec-4] INFO  c.heer.ldaptool.service.LdapService - Connection test successful - Root DSE accessible
+2025-07-12 07:48:48 [http-nio-8080-exec-3] INFO  c.heer.ldaptool.service.LdapService - Connection test successful - Root DSE accessible
+2025-07-12 07:48:48 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 07:48:48 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 07:51:28 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-12 07:51:28 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-12 07:51:34 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Starting LdaptoolApplication using Java 21.0.7 with PID 12091 (/home/jheer/Documents/git/ldaptool/target/classes started by jheer in /home/jheer/Documents/git/ldaptool)
+2025-07-12 07:51:34 [main] DEBUG c.heer.ldaptool.LdaptoolApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-12 07:51:34 [main] INFO  c.heer.ldaptool.LdaptoolApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-12 07:51:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data LDAP repositories in DEFAULT mode.
+2025-07-12 07:51:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 LDAP repository interfaces.
+2025-07-12 07:51:35 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-12 07:51:35 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-12 07:51:35 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-12 07:51:35 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-12 07:51:35 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1071 ms
+2025-07-12 07:51:35 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-12 07:51:35 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-12 07:51:36 [main] DEBUG o.s.l.c.s.AbstractContextSource - AuthenticationSource not set - using default implementation
+2025-07-12 07:51:36 [main] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-07-12 07:51:36 [main] DEBUG o.s.l.c.s.AbstractContextSource - Not using LDAP pooling
+2025-07-12 07:51:36 [main] DEBUG o.s.l.c.s.AbstractContextSource - Trying provider Urls: ldap://localhost:389
+2025-07-12 07:51:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-12 07:51:36 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Started LdaptoolApplication in 2.159 seconds (process running for 2.406)
+2025-07-12 07:51:39 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-12 07:51:39 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-12 07:51:39 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-12 07:51:49 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 07:51:49 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 07:51:49 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 07:51:49 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 07:51:49 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:51:49 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:51:49 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 07:51:49 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 07:51:49 [http-nio-8080-exec-4] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 07:51:49 [http-nio-8080-exec-3] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 07:51:49 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - Testing LDAP connection with single JNDI connection attempt
+2025-07-12 07:51:49 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - Testing LDAP connection with single JNDI connection attempt
+2025-07-12 07:51:49 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - Using authenticated connection for test
+2025-07-12 07:51:49 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - Using authenticated connection for test
+2025-07-12 07:51:49 [http-nio-8080-exec-4] INFO  c.heer.ldaptool.service.LdapService - Connection test successful - single JNDI connection verified
+2025-07-12 07:51:49 [http-nio-8080-exec-3] INFO  c.heer.ldaptool.service.LdapService - Connection test successful - single JNDI connection verified
+2025-07-12 07:51:49 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 07:51:49 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 07:52:10 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-12 07:52:10 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-12 07:58:10 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Starting LdaptoolApplication using Java 21.0.7 with PID 15273 (/home/jheer/Documents/git/ldaptool/target/classes started by jheer in /home/jheer/Documents/git/ldaptool)
+2025-07-12 07:58:10 [main] DEBUG c.heer.ldaptool.LdaptoolApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-12 07:58:10 [main] INFO  c.heer.ldaptool.LdaptoolApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-12 07:58:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-12 07:58:11 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-12 07:58:11 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-12 07:58:11 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-12 07:58:11 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 931 ms
+2025-07-12 07:58:12 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-12 07:58:12 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-12 07:58:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-12 07:58:12 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Started LdaptoolApplication in 1.839 seconds (process running for 2.089)
+2025-07-12 07:58:20 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-12 07:58:20 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-12 07:58:20 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-12 07:58:31 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 07:58:31 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 07:58:31 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 07:58:31 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 07:58:31 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:58:31 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:58:31 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 07:58:31 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 07:58:31 [http-nio-8080-exec-4] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 07:58:31 [http-nio-8080-exec-3] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 07:58:31 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 07:58:31 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 07:58:31 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 07:58:31 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 07:58:31 [http-nio-8080-exec-4] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 07:58:31 [http-nio-8080-exec-3] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 07:58:31 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 07:58:31 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 07:58:45 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - LDAP Root DSE request received for host: localhost
+2025-07-12 07:58:45 [http-nio-8080-exec-5] DEBUG c.h.l.controller.LdapController - Processing authentication header for Root DSE retrieval
+2025-07-12 07:58:45 [http-nio-8080-exec-5] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:58:45 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - Root DSE request with authentication for DN: cn=Directory Manager
+2025-07-12 07:58:45 [http-nio-8080-exec-5] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='', filter='(objectClass=*)', scope='base'
+2025-07-12 07:58:45 [http-nio-8080-exec-5] DEBUG c.heer.ldaptool.service.LdapService - Performing LDAP search: base='', filter='(objectClass=*)', scope=BASE
+2025-07-12 07:58:45 [http-nio-8080-exec-5] DEBUG c.heer.ldaptool.service.LdapService - LDAP search completed successfully, found 1 entries
+2025-07-12 07:58:45 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - Root DSE retrieved successfully with 4 attributes
+2025-07-12 07:58:45 [http-nio-8080-exec-6] INFO  c.h.l.controller.LdapController - LDAP Root DN request received for host: localhost
+2025-07-12 07:58:45 [http-nio-8080-exec-6] DEBUG c.h.l.controller.LdapController - Processing authentication header for Root DN retrieval
+2025-07-12 07:58:45 [http-nio-8080-exec-6] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:58:45 [http-nio-8080-exec-6] INFO  c.h.l.controller.LdapController - Root DN request with authentication for DN: cn=Directory Manager
+2025-07-12 07:58:45 [http-nio-8080-exec-6] INFO  c.heer.ldaptool.service.LdapService - Getting Root DN from LDAP server localhost:1389
+2025-07-12 07:58:45 [http-nio-8080-exec-6] DEBUG c.heer.ldaptool.service.LdapService - Using authentication for Root DN retrieval
+2025-07-12 07:58:45 [http-nio-8080-exec-6] DEBUG c.heer.ldaptool.service.LdapService - Querying Root DSE for naming contexts as per LDAP v3 specification
+2025-07-12 07:58:45 [http-nio-8080-exec-6] DEBUG c.heer.ldaptool.service.LdapService - Root DSE attributes found: [namingContexts]
+2025-07-12 07:58:45 [http-nio-8080-exec-6] DEBUG c.heer.ldaptool.service.LdapService - Root DSE attribute 'namingContexts': [dc=example,dc=com]
+2025-07-12 07:58:45 [http-nio-8080-exec-6] INFO  c.heer.ldaptool.service.LdapService - Found Root DN from namingContexts attribute (LDAP v3 spec): dc=example,dc=com
+2025-07-12 07:58:45 [http-nio-8080-exec-6] DEBUG c.heer.ldaptool.service.LdapService - All naming contexts found: [dc=example,dc=com]
+2025-07-12 07:58:45 [http-nio-8080-exec-6] INFO  c.h.l.controller.LdapController - Root DN retrieved successfully: dc=example,dc=com
+2025-07-12 07:58:48 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: dc=example,dc=com
+2025-07-12 07:58:48 [http-nio-8080-exec-7] DEBUG c.h.l.controller.LdapController - Processing authentication header
+2025-07-12 07:58:48 [http-nio-8080-exec-7] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:58:48 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - Authentication credentials extracted for DN: cn=Directory Manager
+2025-07-12 07:58:48 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: cn=Directory Manager
+2025-07-12 07:58:48 [http-nio-8080-exec-7] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='dc=example,dc=com', filter='(objectClass=*)', scope='one'
+2025-07-12 07:58:48 [http-nio-8080-exec-7] DEBUG c.heer.ldaptool.service.LdapService - Performing LDAP search: base='dc=example,dc=com', filter='(objectClass=*)', scope=ONE
+2025-07-12 07:58:48 [http-nio-8080-exec-7] DEBUG c.heer.ldaptool.service.LdapService - LDAP search completed successfully, found 2 entries
+2025-07-12 07:58:48 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 2 entries
+2025-07-12 07:58:50 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: ou=People,dc=example,dc=com
+2025-07-12 07:58:50 [http-nio-8080-exec-8] DEBUG c.h.l.controller.LdapController - Processing authentication header
+2025-07-12 07:58:50 [http-nio-8080-exec-8] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:58:50 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - Authentication credentials extracted for DN: cn=Directory Manager
+2025-07-12 07:58:50 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: cn=Directory Manager
+2025-07-12 07:58:50 [http-nio-8080-exec-8] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='ou=People,dc=example,dc=com', filter='(objectClass=*)', scope='base'
+2025-07-12 07:58:50 [http-nio-8080-exec-8] DEBUG c.heer.ldaptool.service.LdapService - Performing LDAP search: base='ou=People,dc=example,dc=com', filter='(objectClass=*)', scope=BASE
+2025-07-12 07:58:50 [http-nio-8080-exec-8] DEBUG c.heer.ldaptool.service.LdapService - LDAP search completed successfully, found 1 entries
+2025-07-12 07:58:50 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 1 entries
+2025-07-12 07:58:54 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: uid=admin,dc=example,dc=com
+2025-07-12 07:58:54 [http-nio-8080-exec-9] DEBUG c.h.l.controller.LdapController - Processing authentication header
+2025-07-12 07:58:54 [http-nio-8080-exec-9] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:58:54 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - Authentication credentials extracted for DN: cn=Directory Manager
+2025-07-12 07:58:54 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: cn=Directory Manager
+2025-07-12 07:58:54 [http-nio-8080-exec-9] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='uid=admin,dc=example,dc=com', filter='(objectClass=*)', scope='base'
+2025-07-12 07:58:54 [http-nio-8080-exec-9] DEBUG c.heer.ldaptool.service.LdapService - Performing LDAP search: base='uid=admin,dc=example,dc=com', filter='(objectClass=*)', scope=BASE
+2025-07-12 07:58:54 [http-nio-8080-exec-9] DEBUG c.heer.ldaptool.service.LdapService - LDAP search completed successfully, found 1 entries
+2025-07-12 07:58:54 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 1 entries
+2025-07-12 07:59:33 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: dc=example,dc=com
+2025-07-12 07:59:33 [http-nio-8080-exec-1] DEBUG c.h.l.controller.LdapController - Processing authentication header
+2025-07-12 07:59:33 [http-nio-8080-exec-1] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:59:33 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - Authentication credentials extracted for DN: cn=Directory Manager
+2025-07-12 07:59:33 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: cn=Directory Manager
+2025-07-12 07:59:33 [http-nio-8080-exec-1] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='dc=example,dc=com', filter='(objectClass=*)', scope='sub'
+2025-07-12 07:59:33 [http-nio-8080-exec-1] DEBUG c.heer.ldaptool.service.LdapService - Performing LDAP search: base='dc=example,dc=com', filter='(objectClass=*)', scope=SUB
+2025-07-12 07:59:33 [http-nio-8080-exec-1] DEBUG c.heer.ldaptool.service.LdapService - LDAP search completed successfully, found 104 entries
+2025-07-12 07:59:33 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 104 entries
+2025-07-12 07:59:58 [http-nio-8080-exec-2] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: dc=example,dc=com
+2025-07-12 07:59:58 [http-nio-8080-exec-2] DEBUG c.h.l.controller.LdapController - Processing authentication header
+2025-07-12 07:59:58 [http-nio-8080-exec-2] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 07:59:58 [http-nio-8080-exec-2] INFO  c.h.l.controller.LdapController - Authentication credentials extracted for DN: cn=Directory Manager
+2025-07-12 07:59:58 [http-nio-8080-exec-2] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: cn=Directory Manager
+2025-07-12 07:59:58 [http-nio-8080-exec-2] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='dc=example,dc=com', filter='(objectClass=*)', scope='sub'
+2025-07-12 07:59:58 [http-nio-8080-exec-2] DEBUG c.heer.ldaptool.service.LdapService - Performing LDAP search: base='dc=example,dc=com', filter='(objectClass=*)', scope=SUB
+2025-07-12 07:59:58 [http-nio-8080-exec-2] DEBUG c.heer.ldaptool.service.LdapService - LDAP search completed successfully, found 104 entries
+2025-07-12 07:59:58 [http-nio-8080-exec-2] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 104 entries
+2025-07-12 08:00:01 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: dc=example,dc=com
+2025-07-12 08:00:01 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Processing authentication header
+2025-07-12 08:00:01 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 08:00:01 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - Authentication credentials extracted for DN: cn=Directory Manager
+2025-07-12 08:00:01 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: cn=Directory Manager
+2025-07-12 08:00:01 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='dc=example,dc=com', filter='(objectClass=*)', scope='sub'
+2025-07-12 08:00:01 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - Performing LDAP search: base='dc=example,dc=com', filter='(objectClass=*)', scope=SUB
+2025-07-12 08:00:01 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - LDAP search completed successfully, found 104 entries
+2025-07-12 08:00:01 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 104 entries
+2025-07-12 08:00:10 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: dc=example,dc=com
+2025-07-12 08:00:10 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Processing authentication header
+2025-07-12 08:00:10 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 08:00:10 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - Authentication credentials extracted for DN: cn=Directory Manager
+2025-07-12 08:00:10 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: cn=Directory Manager
+2025-07-12 08:00:10 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='dc=example,dc=com', filter='(objectClass=*)', scope='sub'
+2025-07-12 08:00:10 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - Performing LDAP search: base='dc=example,dc=com', filter='(objectClass=*)', scope=SUB
+2025-07-12 08:00:10 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - LDAP search completed successfully, found 104 entries
+2025-07-12 08:00:10 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 104 entries
+2025-07-12 08:00:29 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 08:00:29 [http-nio-8080-exec-5] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 08:00:29 [http-nio-8080-exec-5] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 08:00:29 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 08:00:29 [http-nio-8080-exec-5] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 08:00:29 [http-nio-8080-exec-5] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 08:00:29 [http-nio-8080-exec-5] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 08:00:29 [http-nio-8080-exec-5] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 08:00:29 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 08:00:29 [http-nio-8080-exec-6] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 08:00:29 [http-nio-8080-exec-6] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 08:00:29 [http-nio-8080-exec-6] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 08:00:29 [http-nio-8080-exec-6] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 08:00:29 [http-nio-8080-exec-6] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 08:00:29 [http-nio-8080-exec-6] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 08:00:29 [http-nio-8080-exec-6] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 08:00:29 [http-nio-8080-exec-6] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 08:00:29 [http-nio-8080-exec-6] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 08:00:42 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 08:00:42 [http-nio-8080-exec-7] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 08:00:42 [http-nio-8080-exec-7] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 08:00:42 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 08:00:42 [http-nio-8080-exec-7] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 08:00:42 [http-nio-8080-exec-7] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 08:00:42 [http-nio-8080-exec-7] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 08:00:42 [http-nio-8080-exec-7] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 08:00:42 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 08:00:42 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 08:00:42 [http-nio-8080-exec-8] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 08:00:42 [http-nio-8080-exec-8] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 08:00:42 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 08:00:42 [http-nio-8080-exec-8] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 08:00:42 [http-nio-8080-exec-8] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 08:00:42 [http-nio-8080-exec-8] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 08:00:42 [http-nio-8080-exec-8] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 08:00:42 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 08:01:20 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - LDAP search request received for host: localhost, base DN: dc=example,dc=com
+2025-07-12 08:01:20 [http-nio-8080-exec-9] DEBUG c.h.l.controller.LdapController - Processing authentication header
+2025-07-12 08:01:20 [http-nio-8080-exec-9] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 08:01:20 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - Authentication credentials extracted for DN: cn=Directory Manager
+2025-07-12 08:01:20 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - Performing LDAP search with DN: cn=Directory Manager
+2025-07-12 08:01:20 [http-nio-8080-exec-9] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='dc=example,dc=com', filter='(objectClass=*)', scope='sub'
+2025-07-12 08:01:20 [http-nio-8080-exec-9] DEBUG c.heer.ldaptool.service.LdapService - Performing LDAP search: base='dc=example,dc=com', filter='(objectClass=*)', scope=SUB
+2025-07-12 08:01:20 [http-nio-8080-exec-9] DEBUG c.heer.ldaptool.service.LdapService - LDAP search completed successfully, found 104 entries
+2025-07-12 08:01:20 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - LDAP search completed successfully. Found 104 entries
+2025-07-12 08:02:13 [http-nio-8080-exec-10] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 08:02:13 [http-nio-8080-exec-10] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 08:02:13 [http-nio-8080-exec-10] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 08:02:13 [http-nio-8080-exec-10] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 08:02:13 [http-nio-8080-exec-10] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 08:02:13 [http-nio-8080-exec-10] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 08:02:13 [http-nio-8080-exec-10] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 08:02:13 [http-nio-8080-exec-10] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 08:02:13 [http-nio-8080-exec-10] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 08:02:13 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 08:02:13 [http-nio-8080-exec-1] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 08:02:13 [http-nio-8080-exec-1] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 08:02:13 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 08:02:13 [http-nio-8080-exec-1] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 08:02:13 [http-nio-8080-exec-1] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 08:02:13 [http-nio-8080-exec-1] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 08:02:13 [http-nio-8080-exec-1] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 08:02:13 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 08:02:21 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-12 08:02:21 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-12 08:34:47 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Starting LdaptoolApplication using Java 21.0.7 with PID 29784 (/home/jheer/Documents/git/ldaptool/target/classes started by jheer in /home/jheer/Documents/git/ldaptool)
+2025-07-12 08:34:47 [main] DEBUG c.heer.ldaptool.LdaptoolApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-12 08:34:47 [main] INFO  c.heer.ldaptool.LdaptoolApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-12 08:34:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-12 08:34:48 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-12 08:34:48 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-12 08:34:48 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-12 08:34:48 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 647 ms
+2025-07-12 08:34:48 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-12 08:34:48 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-12 08:34:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-12 08:34:48 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Started LdaptoolApplication in 1.338 seconds (process running for 1.51)
+2025-07-12 09:12:53 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-12 09:12:53 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-12 09:12:53 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-07-12 09:13:01 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'HEAD' is not supported]
+2025-07-12 09:13:56 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 09:13:56 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 09:13:56 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 09:13:56 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 09:13:56 [http-nio-8080-exec-3] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 09:13:56 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 09:13:56 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 09:13:56 [http-nio-8080-exec-3] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 09:13:56 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 09:14:14 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 09:14:14 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 09:14:14 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 09:14:14 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 09:14:14 [http-nio-8080-exec-4] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 09:14:14 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 09:14:14 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 09:14:14 [http-nio-8080-exec-4] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 09:14:14 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 09:14:24 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 09:14:24 [http-nio-8080-exec-5] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 09:14:24 [http-nio-8080-exec-5] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 09:14:24 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 09:14:24 [http-nio-8080-exec-5] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 09:14:24 [http-nio-8080-exec-5] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 09:14:24 [http-nio-8080-exec-5] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 09:14:24 [http-nio-8080-exec-5] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 09:14:24 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 09:14:43 [http-nio-8080-exec-6] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 09:14:43 [http-nio-8080-exec-6] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 09:14:43 [http-nio-8080-exec-6] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 09:14:43 [http-nio-8080-exec-6] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 09:14:43 [http-nio-8080-exec-6] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 09:14:43 [http-nio-8080-exec-6] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 09:14:43 [http-nio-8080-exec-6] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 09:14:43 [http-nio-8080-exec-6] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 09:14:43 [http-nio-8080-exec-6] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 09:15:00 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - LDAP Root DSE request received for host: localhost
+2025-07-12 09:15:00 [http-nio-8080-exec-7] DEBUG c.h.l.controller.LdapController - Processing authentication header for Root DSE retrieval
+2025-07-12 09:15:00 [http-nio-8080-exec-7] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 09:15:00 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - Root DSE request with authentication for DN: cn=Directory Manager
+2025-07-12 09:15:00 [http-nio-8080-exec-7] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='', filter='(objectClass=*)', scope='base'
+2025-07-12 09:15:00 [http-nio-8080-exec-7] ERROR c.heer.ldaptool.service.LdapService - LDAP search failed: Simple bind operations are not allowed to contain a bind DN without a password. (Result Code: 89 (parameter error))
+com.unboundid.ldap.sdk.LDAPException: Simple bind operations are not allowed to contain a bind DN without a password.
+	at com.unboundid.ldap.sdk.SimpleBindRequest.process(SimpleBindRequest.java:558)
+	at com.unboundid.ldap.sdk.LDAPConnection.processBindOperation(LDAPConnection.java:4588)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2421)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2383)
+	at com.heer.ldaptool.service.LdapService.performLdapSearch(LdapService.java:143)
+	at com.heer.ldaptool.controller.LdapController.getRootDse(LdapController.java:333)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-07-12 09:15:00 [http-nio-8080-exec-7] WARN  c.h.l.controller.LdapController - No Root DSE found for host: localhost
+2025-07-12 09:16:13 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 09:16:13 [http-nio-8080-exec-8] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 09:16:13 [http-nio-8080-exec-8] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 09:16:13 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 09:16:13 [http-nio-8080-exec-8] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 09:16:13 [http-nio-8080-exec-8] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 09:16:13 [http-nio-8080-exec-8] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 09:16:13 [http-nio-8080-exec-8] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 09:16:13 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 09:16:24 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - LDAP Root DSE request received for host: localhost
+2025-07-12 09:16:24 [http-nio-8080-exec-9] DEBUG c.h.l.controller.LdapController - Processing authentication header for Root DSE retrieval
+2025-07-12 09:16:24 [http-nio-8080-exec-9] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 09:16:24 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - Root DSE request with authentication for DN: cn=Directory Manager
+2025-07-12 09:16:24 [http-nio-8080-exec-9] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='', filter='(objectClass=*)', scope='base'
+2025-07-12 09:16:24 [http-nio-8080-exec-9] ERROR c.heer.ldaptool.service.LdapService - LDAP search failed: Simple bind operations are not allowed to contain a bind DN without a password. (Result Code: 89 (parameter error))
+com.unboundid.ldap.sdk.LDAPException: Simple bind operations are not allowed to contain a bind DN without a password.
+	at com.unboundid.ldap.sdk.SimpleBindRequest.process(SimpleBindRequest.java:558)
+	at com.unboundid.ldap.sdk.LDAPConnection.processBindOperation(LDAPConnection.java:4588)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2421)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2383)
+	at com.heer.ldaptool.service.LdapService.performLdapSearch(LdapService.java:143)
+	at com.heer.ldaptool.controller.LdapController.getRootDse(LdapController.java:333)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-07-12 09:16:24 [http-nio-8080-exec-9] WARN  c.h.l.controller.LdapController - No Root DSE found for host: localhost
+2025-07-12 09:16:27 [http-nio-8080-exec-10] INFO  c.h.l.controller.LdapController - LDAP Root DSE request received for host: localhost
+2025-07-12 09:16:27 [http-nio-8080-exec-10] DEBUG c.h.l.controller.LdapController - Processing authentication header for Root DSE retrieval
+2025-07-12 09:16:27 [http-nio-8080-exec-10] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 09:16:27 [http-nio-8080-exec-10] INFO  c.h.l.controller.LdapController - Root DSE request with authentication for DN: cn=Directory Manager
+2025-07-12 09:16:27 [http-nio-8080-exec-10] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='', filter='(objectClass=*)', scope='base'
+2025-07-12 09:16:27 [http-nio-8080-exec-10] ERROR c.heer.ldaptool.service.LdapService - LDAP search failed: Simple bind operations are not allowed to contain a bind DN without a password. (Result Code: 89 (parameter error))
+com.unboundid.ldap.sdk.LDAPException: Simple bind operations are not allowed to contain a bind DN without a password.
+	at com.unboundid.ldap.sdk.SimpleBindRequest.process(SimpleBindRequest.java:558)
+	at com.unboundid.ldap.sdk.LDAPConnection.processBindOperation(LDAPConnection.java:4588)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2421)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2383)
+	at com.heer.ldaptool.service.LdapService.performLdapSearch(LdapService.java:143)
+	at com.heer.ldaptool.controller.LdapController.getRootDse(LdapController.java:333)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-07-12 09:16:27 [http-nio-8080-exec-10] WARN  c.h.l.controller.LdapController - No Root DSE found for host: localhost
+2025-07-12 09:16:28 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - LDAP Root DSE request received for host: localhost
+2025-07-12 09:16:28 [http-nio-8080-exec-1] DEBUG c.h.l.controller.LdapController - Processing authentication header for Root DSE retrieval
+2025-07-12 09:16:28 [http-nio-8080-exec-1] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 09:16:28 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - Root DSE request with authentication for DN: cn=Directory Manager
+2025-07-12 09:16:28 [http-nio-8080-exec-1] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='', filter='(objectClass=*)', scope='base'
+2025-07-12 09:16:28 [http-nio-8080-exec-1] ERROR c.heer.ldaptool.service.LdapService - LDAP search failed: Simple bind operations are not allowed to contain a bind DN without a password. (Result Code: 89 (parameter error))
+com.unboundid.ldap.sdk.LDAPException: Simple bind operations are not allowed to contain a bind DN without a password.
+	at com.unboundid.ldap.sdk.SimpleBindRequest.process(SimpleBindRequest.java:558)
+	at com.unboundid.ldap.sdk.LDAPConnection.processBindOperation(LDAPConnection.java:4588)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2421)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2383)
+	at com.heer.ldaptool.service.LdapService.performLdapSearch(LdapService.java:143)
+	at com.heer.ldaptool.controller.LdapController.getRootDse(LdapController.java:333)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-07-12 09:16:28 [http-nio-8080-exec-1] WARN  c.h.l.controller.LdapController - No Root DSE found for host: localhost
+2025-07-12 09:16:33 [http-nio-8080-exec-2] INFO  c.h.l.controller.LdapController - LDAP Root DSE request received for host: localhost
+2025-07-12 09:16:33 [http-nio-8080-exec-2] DEBUG c.h.l.controller.LdapController - Processing authentication header for Root DSE retrieval
+2025-07-12 09:16:33 [http-nio-8080-exec-2] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 09:16:33 [http-nio-8080-exec-2] INFO  c.h.l.controller.LdapController - Root DSE request with authentication for DN: cn=Directory Manager
+2025-07-12 09:16:33 [http-nio-8080-exec-2] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='', filter='(objectClass=*)', scope='base'
+2025-07-12 09:16:33 [http-nio-8080-exec-2] ERROR c.heer.ldaptool.service.LdapService - LDAP search failed: Simple bind operations are not allowed to contain a bind DN without a password. (Result Code: 89 (parameter error))
+com.unboundid.ldap.sdk.LDAPException: Simple bind operations are not allowed to contain a bind DN without a password.
+	at com.unboundid.ldap.sdk.SimpleBindRequest.process(SimpleBindRequest.java:558)
+	at com.unboundid.ldap.sdk.LDAPConnection.processBindOperation(LDAPConnection.java:4588)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2421)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2383)
+	at com.heer.ldaptool.service.LdapService.performLdapSearch(LdapService.java:143)
+	at com.heer.ldaptool.controller.LdapController.getRootDse(LdapController.java:333)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-07-12 09:16:33 [http-nio-8080-exec-2] WARN  c.h.l.controller.LdapController - No Root DSE found for host: localhost
+2025-07-12 09:17:03 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 09:17:03 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 09:17:03 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 09:17:03 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 09:17:03 [http-nio-8080-exec-3] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 09:17:03 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 09:17:03 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 09:17:03 [http-nio-8080-exec-3] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 09:17:03 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 09:17:11 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP Root DSE request received for host: localhost
+2025-07-12 09:17:11 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Processing authentication header for Root DSE retrieval
+2025-07-12 09:17:11 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 09:17:11 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - Root DSE request with authentication for DN: cn=Directory Manager
+2025-07-12 09:17:11 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='', filter='(objectClass=*)', scope='base'
+2025-07-12 09:17:11 [http-nio-8080-exec-4] ERROR c.heer.ldaptool.service.LdapService - LDAP search failed: Simple bind operations are not allowed to contain a bind DN without a password. (Result Code: 89 (parameter error))
+com.unboundid.ldap.sdk.LDAPException: Simple bind operations are not allowed to contain a bind DN without a password.
+	at com.unboundid.ldap.sdk.SimpleBindRequest.process(SimpleBindRequest.java:558)
+	at com.unboundid.ldap.sdk.LDAPConnection.processBindOperation(LDAPConnection.java:4588)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2421)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2383)
+	at com.heer.ldaptool.service.LdapService.performLdapSearch(LdapService.java:143)
+	at com.heer.ldaptool.controller.LdapController.getRootDse(LdapController.java:333)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-07-12 09:17:11 [http-nio-8080-exec-4] WARN  c.h.l.controller.LdapController - No Root DSE found for host: localhost
+2025-07-12 09:17:23 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-12 09:17:23 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-12 10:35:16 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Starting LdaptoolApplication using Java 21.0.7 with PID 9466 (/home/jheer/Documents/git/ldaptool/target/classes started by jheer in /home/jheer/Documents/git/ldaptool)
+2025-07-12 10:35:16 [main] DEBUG c.heer.ldaptool.LdaptoolApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-12 10:35:16 [main] INFO  c.heer.ldaptool.LdaptoolApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-12 10:35:17 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-12 10:35:17 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-12 10:35:17 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-12 10:35:17 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-12 10:35:17 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 953 ms
+2025-07-12 10:35:18 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-12 10:35:18 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-12 10:35:18 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-12 10:35:18 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Started LdaptoolApplication in 1.902 seconds (process running for 2.126)
+2025-07-12 10:36:33 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-12 10:36:33 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-12 10:36:33 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-12 10:37:07 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 10:37:07 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 10:37:07 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 10:37:07 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 10:37:07 [http-nio-8080-exec-4] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 10:37:07 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 10:37:07 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 10:37:07 [http-nio-8080-exec-4] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 10:37:07 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 10:37:14 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - LDAP Root DSE request received for host: localhost
+2025-07-12 10:37:14 [http-nio-8080-exec-5] DEBUG c.h.l.controller.LdapController - Processing authentication header for Root DSE retrieval
+2025-07-12 10:37:14 [http-nio-8080-exec-5] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 10:37:14 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - Root DSE request with authentication for DN: cn=Directory Manager
+2025-07-12 10:37:14 [http-nio-8080-exec-5] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='', filter='(objectClass=*)', scope='base'
+2025-07-12 10:37:14 [http-nio-8080-exec-5] ERROR c.heer.ldaptool.service.LdapService - LDAP search failed: Simple bind operations are not allowed to contain a bind DN without a password. (Result Code: 89 (parameter error))
+com.unboundid.ldap.sdk.LDAPException: Simple bind operations are not allowed to contain a bind DN without a password.
+	at com.unboundid.ldap.sdk.SimpleBindRequest.process(SimpleBindRequest.java:558)
+	at com.unboundid.ldap.sdk.LDAPConnection.processBindOperation(LDAPConnection.java:4588)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2421)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2383)
+	at com.heer.ldaptool.service.LdapService.performLdapSearch(LdapService.java:143)
+	at com.heer.ldaptool.controller.LdapController.getRootDse(LdapController.java:333)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-07-12 10:37:14 [http-nio-8080-exec-5] WARN  c.h.l.controller.LdapController - No Root DSE found for host: localhost
+2025-07-12 10:38:14 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-12 10:38:14 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-12 10:46:08 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Starting LdaptoolApplication using Java 21.0.7 with PID 14291 (/home/jheer/Documents/git/ldaptool/target/classes started by jheer in /home/jheer/Documents/git/ldaptool)
+2025-07-12 10:46:08 [main] DEBUG c.heer.ldaptool.LdaptoolApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-12 10:46:08 [main] INFO  c.heer.ldaptool.LdaptoolApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-12 10:46:09 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-12 10:46:09 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-12 10:46:09 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-12 10:46:09 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-12 10:46:09 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 657 ms
+2025-07-12 10:46:09 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-12 10:46:09 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-12 10:46:09 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-12 10:46:09 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Started LdaptoolApplication in 1.381 seconds (process running for 1.575)
+2025-07-12 10:46:36 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-12 10:46:36 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-12 10:46:36 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-12 10:46:36 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 10:46:36 [http-nio-8080-exec-1] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 10:46:36 [http-nio-8080-exec-1] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 10:46:36 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 10:46:36 [http-nio-8080-exec-1] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 10:46:36 [http-nio-8080-exec-1] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 10:46:36 [http-nio-8080-exec-1] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 10:46:36 [http-nio-8080-exec-1] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 10:46:36 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 10:47:03 [http-nio-8080-exec-2] INFO  c.h.l.controller.LdapController - LDAP Root DSE request received for host: localhost
+2025-07-12 10:47:03 [http-nio-8080-exec-2] DEBUG c.h.l.controller.LdapController - Processing authentication header for Root DSE retrieval
+2025-07-12 10:47:03 [http-nio-8080-exec-2] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 10:47:03 [http-nio-8080-exec-2] INFO  c.h.l.controller.LdapController - Root DSE request with authentication for DN: cn=Directory Manager
+2025-07-12 10:47:03 [http-nio-8080-exec-2] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='', filter='(objectClass=*)', scope='base'
+2025-07-12 10:47:03 [http-nio-8080-exec-2] ERROR c.heer.ldaptool.service.LdapService - LDAP search failed: Simple bind operations are not allowed to contain a bind DN without a password. (Result Code: 89 (parameter error))
+com.unboundid.ldap.sdk.LDAPException: Simple bind operations are not allowed to contain a bind DN without a password.
+	at com.unboundid.ldap.sdk.SimpleBindRequest.process(SimpleBindRequest.java:558)
+	at com.unboundid.ldap.sdk.LDAPConnection.processBindOperation(LDAPConnection.java:4588)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2421)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2383)
+	at com.heer.ldaptool.service.LdapService.performLdapSearch(LdapService.java:143)
+	at com.heer.ldaptool.controller.LdapController.getRootDse(LdapController.java:333)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-07-12 10:47:03 [http-nio-8080-exec-2] WARN  c.h.l.controller.LdapController - No Root DSE found for host: localhost
+2025-07-12 10:53:11 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - LDAP Root DSE request received for host: localhost
+2025-07-12 10:53:11 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Processing authentication header for Root DSE retrieval
+2025-07-12 10:53:11 [http-nio-8080-exec-3] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 10:53:11 [http-nio-8080-exec-3] INFO  c.h.l.controller.LdapController - Root DSE request with authentication for DN: cn=Directory Manager
+2025-07-12 10:53:11 [http-nio-8080-exec-3] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='', filter='(objectClass=*)', scope='base'
+2025-07-12 10:53:11 [http-nio-8080-exec-3] ERROR c.heer.ldaptool.service.LdapService - LDAP search failed: Simple bind operations are not allowed to contain a bind DN without a password. (Result Code: 89 (parameter error))
+com.unboundid.ldap.sdk.LDAPException: Simple bind operations are not allowed to contain a bind DN without a password.
+	at com.unboundid.ldap.sdk.SimpleBindRequest.process(SimpleBindRequest.java:558)
+	at com.unboundid.ldap.sdk.LDAPConnection.processBindOperation(LDAPConnection.java:4588)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2421)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2383)
+	at com.heer.ldaptool.service.LdapService.performLdapSearch(LdapService.java:143)
+	at com.heer.ldaptool.controller.LdapController.getRootDse(LdapController.java:333)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-07-12 10:53:11 [http-nio-8080-exec-3] WARN  c.h.l.controller.LdapController - No Root DSE found for host: localhost
+2025-07-12 10:53:28 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 10:53:28 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 10:53:28 [http-nio-8080-exec-4] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 10:53:28 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 10:53:28 [http-nio-8080-exec-4] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 10:53:28 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 10:53:28 [http-nio-8080-exec-4] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 10:53:28 [http-nio-8080-exec-4] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 10:53:28 [http-nio-8080-exec-4] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 10:53:36 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - LDAP Root DSE request received for host: localhost
+2025-07-12 10:53:36 [http-nio-8080-exec-5] DEBUG c.h.l.controller.LdapController - Processing authentication header for Root DSE retrieval
+2025-07-12 10:53:36 [http-nio-8080-exec-5] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 10:53:36 [http-nio-8080-exec-5] INFO  c.h.l.controller.LdapController - Root DSE request with authentication for DN: cn=Directory Manager
+2025-07-12 10:53:36 [http-nio-8080-exec-5] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='', filter='(objectClass=*)', scope='base'
+2025-07-12 10:53:36 [http-nio-8080-exec-5] ERROR c.heer.ldaptool.service.LdapService - LDAP search failed: Simple bind operations are not allowed to contain a bind DN without a password. (Result Code: 89 (parameter error))
+com.unboundid.ldap.sdk.LDAPException: Simple bind operations are not allowed to contain a bind DN without a password.
+	at com.unboundid.ldap.sdk.SimpleBindRequest.process(SimpleBindRequest.java:558)
+	at com.unboundid.ldap.sdk.LDAPConnection.processBindOperation(LDAPConnection.java:4588)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2421)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2383)
+	at com.heer.ldaptool.service.LdapService.performLdapSearch(LdapService.java:143)
+	at com.heer.ldaptool.controller.LdapController.getRootDse(LdapController.java:333)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-07-12 10:53:36 [http-nio-8080-exec-5] WARN  c.h.l.controller.LdapController - No Root DSE found for host: localhost
+2025-07-12 10:54:42 [http-nio-8080-exec-6] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 10:54:42 [http-nio-8080-exec-6] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 10:54:42 [http-nio-8080-exec-6] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 10:54:42 [http-nio-8080-exec-6] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 10:54:42 [http-nio-8080-exec-6] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 10:54:42 [http-nio-8080-exec-6] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 10:54:42 [http-nio-8080-exec-6] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 10:54:42 [http-nio-8080-exec-6] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 10:54:42 [http-nio-8080-exec-6] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 10:54:53 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - LDAP Root DSE request received for host: localhost
+2025-07-12 10:54:53 [http-nio-8080-exec-7] DEBUG c.h.l.controller.LdapController - Processing authentication header for Root DSE retrieval
+2025-07-12 10:54:53 [http-nio-8080-exec-7] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 10:54:53 [http-nio-8080-exec-7] INFO  c.h.l.controller.LdapController - Root DSE request with authentication for DN: cn=Directory Manager
+2025-07-12 10:54:53 [http-nio-8080-exec-7] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='', filter='(objectClass=*)', scope='base'
+2025-07-12 10:54:53 [http-nio-8080-exec-7] ERROR c.heer.ldaptool.service.LdapService - LDAP search failed: Simple bind operations are not allowed to contain a bind DN without a password. (Result Code: 89 (parameter error))
+com.unboundid.ldap.sdk.LDAPException: Simple bind operations are not allowed to contain a bind DN without a password.
+	at com.unboundid.ldap.sdk.SimpleBindRequest.process(SimpleBindRequest.java:558)
+	at com.unboundid.ldap.sdk.LDAPConnection.processBindOperation(LDAPConnection.java:4588)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2421)
+	at com.unboundid.ldap.sdk.LDAPConnection.bind(LDAPConnection.java:2383)
+	at com.heer.ldaptool.service.LdapService.performLdapSearch(LdapService.java:143)
+	at com.heer.ldaptool.controller.LdapController.getRootDse(LdapController.java:333)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-07-12 10:54:53 [http-nio-8080-exec-7] WARN  c.h.l.controller.LdapController - No Root DSE found for host: localhost
+2025-07-12 10:58:29 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 10:58:29 [http-nio-8080-exec-8] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 10:58:29 [http-nio-8080-exec-8] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 10:58:29 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 10:58:29 [http-nio-8080-exec-8] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 10:58:29 [http-nio-8080-exec-8] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 10:58:29 [http-nio-8080-exec-8] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 10:58:29 [http-nio-8080-exec-8] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 10:58:29 [http-nio-8080-exec-8] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 10:58:33 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - LDAP Root DSE request received for host: localhost
+2025-07-12 10:58:33 [http-nio-8080-exec-9] DEBUG c.h.l.controller.LdapController - Processing authentication header for Root DSE retrieval
+2025-07-12 10:58:33 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - Root DSE request with anonymous connection
+2025-07-12 10:58:33 [http-nio-8080-exec-9] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='', filter='(objectClass=*)', scope='base'
+2025-07-12 10:58:33 [http-nio-8080-exec-9] DEBUG c.heer.ldaptool.service.LdapService - Performing LDAP search: base='', filter='(objectClass=*)', scope=BASE
+2025-07-12 10:58:33 [http-nio-8080-exec-9] DEBUG c.heer.ldaptool.service.LdapService - LDAP search completed successfully, found 1 entries
+2025-07-12 10:58:33 [http-nio-8080-exec-9] INFO  c.h.l.controller.LdapController - Root DSE retrieved successfully with 4 attributes
+2025-07-12 10:58:46 [http-nio-8080-exec-10] INFO  c.h.l.controller.LdapController - LDAP Root DSE request received for host: localhost
+2025-07-12 10:58:46 [http-nio-8080-exec-10] DEBUG c.h.l.controller.LdapController - Processing authentication header for Root DSE retrieval
+2025-07-12 10:58:46 [http-nio-8080-exec-10] INFO  c.h.l.controller.LdapController - Root DSE request with anonymous connection
+2025-07-12 10:58:46 [http-nio-8080-exec-10] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='', filter='(objectClass=*)', scope='base'
+2025-07-12 10:58:46 [http-nio-8080-exec-10] DEBUG c.heer.ldaptool.service.LdapService - Performing LDAP search: base='', filter='(objectClass=*)', scope=BASE
+2025-07-12 10:58:46 [http-nio-8080-exec-10] DEBUG c.heer.ldaptool.service.LdapService - LDAP search completed successfully, found 1 entries
+2025-07-12 10:58:46 [http-nio-8080-exec-10] INFO  c.h.l.controller.LdapController - Root DSE retrieved successfully with 4 attributes
+2025-07-12 10:58:56 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - LDAP Root DSE request received for host: localhost
+2025-07-12 10:58:56 [http-nio-8080-exec-1] DEBUG c.h.l.controller.LdapController - Processing authentication header for Root DSE retrieval
+2025-07-12 10:58:56 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - Root DSE request with anonymous connection
+2025-07-12 10:58:56 [http-nio-8080-exec-1] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='', filter='(objectClass=*)', scope='base'
+2025-07-12 10:58:56 [http-nio-8080-exec-1] DEBUG c.heer.ldaptool.service.LdapService - Performing LDAP search: base='', filter='(objectClass=*)', scope=BASE
+2025-07-12 10:58:56 [http-nio-8080-exec-1] DEBUG c.heer.ldaptool.service.LdapService - LDAP search completed successfully, found 1 entries
+2025-07-12 10:58:56 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - Root DSE retrieved successfully with 4 attributes
+2025-07-12 11:07:33 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-12 11:07:33 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-12 14:18:44 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Starting LdaptoolApplication using Java 21.0.7 with PID 5126 (/home/jheer/Documents/git/ldaptool/backend/target/classes started by jheer in /home/jheer/Documents/git/ldaptool/backend)
+2025-07-12 14:18:44 [main] DEBUG c.heer.ldaptool.LdaptoolApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-12 14:18:44 [main] INFO  c.heer.ldaptool.LdaptoolApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-12 14:18:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-12 14:18:44 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-12 14:18:44 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-12 14:18:44 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-12 14:18:44 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 622 ms
+2025-07-12 14:18:45 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-12 14:18:45 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-12 14:18:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-12 14:18:45 [main] INFO  c.heer.ldaptool.LdaptoolApplication - Started LdaptoolApplication in 1.268 seconds (process running for 1.451)
+2025-07-12 14:21:27 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-12 14:21:27 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-12 14:21:27 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-12 14:21:27 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - LDAP connection test request received for host: localhost
+2025-07-12 14:21:27 [http-nio-8080-exec-1] DEBUG c.h.l.controller.LdapController - Processing authentication header for connection test
+2025-07-12 14:21:27 [http-nio-8080-exec-1] DEBUG c.h.l.controller.LdapController - Basic authentication header found, extracting credentials
+2025-07-12 14:21:27 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - Testing connection with authentication for DN: cn=Directory Manager
+2025-07-12 14:21:27 [http-nio-8080-exec-1] INFO  c.heer.ldaptool.service.LdapService - Testing LDAP connection to localhost:1389 with DN: cn=Directory Manager
+2025-07-12 14:21:27 [http-nio-8080-exec-1] DEBUG c.heer.ldaptool.service.LdapService - LDAP connection established successfully
+2025-07-12 14:21:27 [http-nio-8080-exec-1] DEBUG c.heer.ldaptool.service.LdapService - Authentication successful
+2025-07-12 14:21:27 [http-nio-8080-exec-1] INFO  c.heer.ldaptool.service.LdapService - Connection test successful
+2025-07-12 14:21:27 [http-nio-8080-exec-1] INFO  c.h.l.controller.LdapController - LDAP connection test successful for host: localhost
+2025-07-12 14:21:54 [http-nio-8080-exec-2] INFO  c.h.l.controller.LdapController - LDAP Root DSE request received for host: localhost
+2025-07-12 14:21:54 [http-nio-8080-exec-2] DEBUG c.h.l.controller.LdapController - Processing authentication header for Root DSE retrieval
+2025-07-12 14:21:54 [http-nio-8080-exec-2] INFO  c.h.l.controller.LdapController - Root DSE request with anonymous connection
+2025-07-12 14:21:54 [http-nio-8080-exec-2] DEBUG c.heer.ldaptool.service.LdapService - Starting LDAP search with base='', filter='(objectClass=*)', scope='base'
+2025-07-12 14:21:54 [http-nio-8080-exec-2] DEBUG c.heer.ldaptool.service.LdapService - Performing LDAP search: base='', filter='(objectClass=*)', scope=BASE
+2025-07-12 14:21:54 [http-nio-8080-exec-2] DEBUG c.heer.ldaptool.service.LdapService - LDAP search completed successfully, found 1 entries
+2025-07-12 14:21:54 [http-nio-8080-exec-2] INFO  c.h.l.controller.LdapController - Root DSE retrieved successfully with 4 attributes

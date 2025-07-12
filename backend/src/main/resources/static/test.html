@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="testApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+</head>
+<body ng-controller="TestController">
+    <h1>Angular Test</h1>
+    <p>Message: {{message}}</p>
+    <p>Current time: {{currentTime}}</p>
+    
+    <script>
+        angular.module('testApp', [])
+        .controller('TestController', ['$scope', function($scope) {
+            $scope.message = "Angular is working!";
+            $scope.currentTime = new Date().toString();
+            console.log("Test controller initialized");
+        }]);
+    </script>
+</body>
+</html>

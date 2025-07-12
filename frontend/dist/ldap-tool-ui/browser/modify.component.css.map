@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/modify/modify.component.ts"],
+  "sourcesContent": ["\n    .modify-container {\n      padding: 2rem;\n      text-align: center;\n    }\n    h2 {\n      color: #667eea;\n      margin-bottom: 1rem;\n    }\n    p {\n      color: #666;\n      margin: 0.5rem 0;\n    }\n  "],
+  "mappings": ";AACI,CAAA;AACE,WAAA;AACA,cAAA;;AAEF;AACE,SAAA;AACA,iBAAA;;AAEF;AACE,SAAA;AACA,UAAA,OAAA;;",
+  "names": []
+}

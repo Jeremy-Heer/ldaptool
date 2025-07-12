@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="testApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+</head>
+<body ng-controller="TestController">
+    <h1>Angular Test</h1>
+    <p>Message: {{message}}</p>
+    <p>Search Request Base: {{searchRequest.base}}</p>
+    <input type="text" ng-model="searchRequest.base" placeholder="Enter base DN">
+    <button ng-click="testFunction()">Test Function</button>
+    <p ng-if="functionCalled">Function was called!</p>
+
+    <script>
+        angular.module('testApp', [])
+        .controller('TestController', ['$scope', function($scope) {
+            $scope.message = "Angular is working!";
+            $scope.searchRequest = {
+                base: '',
+                filter: '(objectClass=*)',
+                scope: 'sub'
+            };
+            $scope.functionCalled = false;
+            
+            $scope.testFunction = function() {
+                $scope.functionCalled = true;
+                console.log("Test function called with base:", $scope.searchRequest.base);
+            };
+        }]);
+    </script>
+</body>
+</html>
